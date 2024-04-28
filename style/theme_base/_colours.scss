@@ -1,0 +1,74 @@
+
+
+$charcoal: #4B4955;
+$magenta: #BF5083;
+$darkMagenta: #963E67;
+$purple: #572F58;
+$lightPurple: #8C4D8D;
+$gold: #D97803;
+$lightGold: #DA9E6A;
+$lightPeach: #F6E3DC;
+$darkPeach: #D59F9D;
+$lightBlue: #BBCDCF;
+$taupe: #C19C82;
+
+
+
+
+
+$white: #fff;
+$black: $charcoal;
+
+$cardColors: #E1125C, #32A942, #F77400, #2F96F8, #A13ACC,#1CC5C4,#6F46C3, #1EBB8A, #FF9900, #25B3FC, #F65300, #A71679;
+$tabColors:#3D52B9,#3674D9,#2F96F8,#1CC5C4,#1EBB8A;
+
+$tabColorsLength: length($tabColors);
+$cardColorsLength: length($cardColors);
+
+.card-color {
+    @for $i from 1 through $cardColorsLength {
+      &:nth-of-type(#{$cardColorsLength}n+#{$i}) {
+        background-color: nth($cardColors, $i);
+      }
+    }
+  }
+  .update-color {
+    @for $i from 1 through $cardColorsLength {
+      &:nth-of-type(#{$cardColorsLength}n+#{$i}) {
+        * {
+          color: nth($cardColors, $i)!important;
+          .learn-button {
+            border-bottom: 2px solid nth($cardColors, $i);
+          }
+        }
+        &:hover {
+          .inner, .tab {
+            background-color: nth($cardColors, $i)!important;
+          }
+          .learn-button {
+            border-bottom: 2px solid white;
+          }
+              *{
+                color: $white!important;
+              }
+        
+        }
+      }
+    }
+  }
+  .tab-color {
+    @for $i from 1 through $tabColorsLength{
+      &:nth-of-type(#{$tabColorsLength}n+#{$i}){
+      
+        &.tab-pane{
+          background-color: nth($tabColors, $i);
+        }
+        svg {
+          path{
+            fill: nth($tabColors, $i);
+
+          }
+        }
+      }
+    }
+  }

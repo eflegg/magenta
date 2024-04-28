@@ -1,0 +1,392 @@
+
+
+.skiplink{
+		position: absolute;
+		background-color: $magenta;
+		border: $gold;
+		color: $lightPeach;
+		font-weight: 500;
+		border-radius: 72px;
+		left: 0;
+		top: 5rem;
+		padding: 20px;
+		font-size: 1.6rem;
+		transform: translateX(-200%);
+		&:focus {
+			transform: translateX(0%);
+		}
+	}
+header {
+	// border: 3px solid orangered;
+	position: relative;
+	z-index: 20;
+	//using js to change positioning when open. get rid of it
+	width: 85%;
+	margin: 5% auto;
+	display: block;
+	@include media(sm){
+		display: flex;
+		justify-content: flex-start;
+	}
+	@include media(md){
+		margin: 2% auto;
+	}
+	@include media(lg){
+		justify-content: space-between;
+		align-items: center;
+	}
+	@include media(xl){
+		padding: 1rem 5rem 0 5rem;
+	}
+
+	
+	nav {
+		// border: 3px solid blue;
+			&[aria-hidden="true"]{
+				top: 0;
+				left: -200%;
+				opacity: 0;
+				visibility: hidden;
+				transition: all .5s ease-in-out;
+				.menu-item {
+					left: -20px;
+					transition: all .5s ease-in-out;
+				}
+			}
+			&[aria-hidden="false"]{
+				top: 0;
+				left: 0;
+				opacity: 1;
+				visibility: visible;
+				width: 100vw;
+				height: 100vh;
+				transition: all .5s ease-in-out;
+				background-color: $lightBlue;
+				.main{
+					height: 80%;
+					margin-top: 15rem;
+
+					// overflow: scroll;
+				}
+				@for $i from 1 to 10 {
+					.menu-item:nth-child(#{$i}) { 
+						left: 0;
+						transition: all .5s ease-in-out;
+						transition-delay: $i * .15s;
+					}
+				}
+				
+			}
+			position: fixed;
+			
+			//resetting nav styles
+			@include media(lg){
+				overflow: initial;
+				display: flex;
+				position: relative;
+				&[aria-hidden="true"], &[aria-hidden="false"] {
+					top: initial;
+					left: initial;
+					opacity: initial;
+					background-color: initial;
+					transition: none;
+					width: initial;
+					overflow: initial;
+					visibility: visible;
+					display: block;
+					.menu-item {
+						left: 0;
+					}
+					.menu-main-menu-container{
+					margin-top: initial;
+					}
+				}
+			}
+		
+			.main {
+				overflow: scroll;
+				list-style: none;
+				padding-left: 0;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: flex-start;
+			
+				height: auto;
+				width: 100%;
+				position: relative;
+				// z-index: 30;
+				@include media(lg){
+					overflow: visible;
+					margin-top: initial;
+					display: flex;
+					position: relative;
+					flex-direction: row;
+				}	
+				li {
+					
+					width: 85%;
+					font-size: 2.4rem;
+					@include media(lg){
+						width: initial;
+					}
+					margin: 1.5rem;
+					a {
+						color: $magenta;
+						font-weight: 500;
+						margin-bottom:10px;
+					}
+				
+				}
+			}
+			.main>li:hover>a {
+				&:after {
+					transition: all 0.2s ease-in-out;
+					width: 100%;
+				}
+			}
+			.main>li>a {
+				
+					&:after {
+						transition: all 0.2s ease-in-out;
+						position: absolute;
+						content: "";
+						height: 2px;
+						width: 0%;
+						background-color: $magenta;
+						left: 0;
+						top: 0;
+						transform: translateY(3rem);
+						@include media(md){
+							transform: translateY(3rem);
+						}
+					}
+				
+			}
+			.top-level-subnav {
+				li {
+					margin: 1rem 0.5rem;
+					
+					a {
+						&:after {
+							transition: all 0.2s ease-in-out;
+							position: absolute;
+							content: "";
+							height: 2px;
+							width: 0%;
+							background-color: $magenta;
+							left: 0;
+							transform: translateY(3rem);
+							@include media(md){
+								transform: translateY(2rem);
+							}
+						}
+						&:hover {
+							
+								&:after {
+									transition: all 0.2s ease-in-out;
+									width: 100%;
+								}
+							
+						}
+					}
+				
+				}
+			}
+			.second-level-subnav {
+				margin-top: .5rem;
+				padding-left: 1rem;
+				li {
+					margin: 0;
+				}
+			}
+			
+		}
+		.menu-item-has-children {
+			button {
+				content: '';
+				border-color: white;
+				border-style: solid;
+				border-width: 0.25rem 0.25rem 0 0;
+				border-radius:0px;
+				background-color: transparent;
+				display: inline-block;
+				padding: 0px;
+				margin: 0px;
+				height: 0.9rem;
+				width: 0.9rem;
+				left: 0.15rem;
+				position: relative;
+				vertical-align: middle;
+				top: -0.3rem;
+				transform: rotate(135deg);
+				margin:0;
+				left: 0.5rem;
+				@include media(lg){
+					margin-left: 0;
+				}
+			}
+		}
+	
+
+//Leaving this only in case we need a dropdown menu in future
+		.menu-item {
+			position: relative;
+		}
+		//this can probably be consolidated with the above
+		.top-level-subnav{
+			position: absolute;
+			visibility: hidden;
+			left: 0;
+			padding: 0;
+			list-style: none;
+			max-height: 1px;
+			width: 1px;
+			transition: max-height .75s ease-in-out;
+			clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+			clip: rect(1px, 1px, 1px, 1px);
+			list-style: none;
+			li {
+				opacity: 0;
+			}
+			
+			&[aria-hidden="false"] {
+				position: relative;
+				visibility: visible;
+				width: 100%;
+				max-height: 60rem;
+				// z-index: 10;
+				padding: 0.8rem;
+				clip: auto;
+				transition: max-height .75s ease-in-out;
+				@for $i from 1 to 10 {
+					li:nth-child(#{$i}) { 
+						opacity: 1;
+						transition: opacity .5s ease-in-out;
+						transition-delay: $i * .15s;
+					}
+				  }
+			
+				@include media(lg){
+					position: absolute;
+					left: -1.5rem;
+					width: 20rem;
+					.second-level-subnav{
+						width: 19rem;
+					}
+					max-height: 32rem;
+					background: $magenta;
+				}
+			}
+			a {
+			  color: $white;
+			  font-size: 2rem;
+			  @include media(lg){
+				  font-size: 1.4rem;
+			  }
+			}
+		}
+		.second-level-subnav {
+			list-style: none;
+			position: relative!important;
+			padding-left: 0;
+			li {
+				&:before {
+				position: relative;
+				top: -4px;
+				left: 0;
+				margin-right: 4px;
+				content: "";
+				display: inline-block;
+				height: 2px;
+				width: 10px;
+				background: $white;
+				}
+				a {
+					font-size: 1.4rem;
+				}
+			}
+		}
+		
+	}
+	//from scratch hamburger menu
+.btn-nav {
+   border: 0px;
+	position: absolute;
+	width: 8rem;
+	height: 5rem;
+	z-index: 50;
+	right: 0rem;
+	top: -1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: transparent;
+	&:hover {
+		background-color: transparent;
+		border: 0px;
+	}
+	span {
+		position: relative;
+		border: 1px solid $darkMagenta;
+		display: block;
+		width: 7rem;
+		height: 0.2rem;
+		border-radius: .5rem;
+		margin-bottom: .5rem;
+		margin-top: 0.5rem;
+		background: $darkMagenta;
+	
+	}
+	&[aria-expanded="true"]{
+		.burger-1 {
+			position: relative;
+
+			transform: rotate(-45deg);
+			top: 22px;
+			left: 0;
+			transition: all 0.2s ease-in-out;
+		}
+		.burger-2 {
+			position: relative;
+			left: 150px;
+			overflow: hidden;
+			transition: all 0.2s ease-in-out;
+		}
+		.burger-3 {
+			position: relative;
+			top: -3px;
+			transform: rotate(45deg);
+			transition: all 0.2s ease-in-out;
+		}
+	}
+	&[aria-expanded="false"] {
+		.burger-1 {
+			transform: rotate(0deg);
+			transition: all 0.2s ease-in-out;
+		}
+		.burger-2 {
+			overflow: hidden;
+			transition: all 0.2s ease-in-out;
+		}
+		.burger-3 {
+			transform: rotate(0deg);
+			transition: all 0.2s ease-in-out;
+		}
+	}
+	@include media(lg) {
+		display: none;
+	}
+}
+.js-hamburger-menu {
+	display: block;
+	@include media(lg) {
+		display: none;
+	}
+}
+
+
+
+
+
+
