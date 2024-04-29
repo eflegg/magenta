@@ -683,6 +683,16 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/images\/svg\/background-crystal.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/build\/images\/svg\/background-crystal.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
     "\/images\/svg\/crystal-1.svg" : {
       "ft" : 2097152,
       "miP" : 0,

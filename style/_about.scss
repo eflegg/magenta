@@ -1,3 +1,14 @@
+main {
+    position: relative;
+    .background-crystal {
+        position: absolute;
+        bottom: -10%;
+        left: 0;
+        height: 90%;
+      
+    }
+}
+
 .about-hero{
     width: 100%;
     display: flex;
@@ -66,10 +77,14 @@
         }
     }
     h2 {
+       
         color: $darkMagenta;
+        position: sticky;
+        top: 25%;
         margin-bottom: 2rem;
         @include media(md){
             text-align: right;
+            margin-bottom: 0;
         }
       
     }

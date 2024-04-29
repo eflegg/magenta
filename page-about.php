@@ -12,6 +12,12 @@ get_header(); ?>
 $headshot = 'http://localhost:10038/wp-content/uploads/2024/04/melanie-headshot_cropped.jpg';
 ?>
 
+<main class="about--main">
+
+<figure class="background-crystal">
+<img src="<?php bloginfo('template_url'); ?>/images/svg/background-crystal.svg"  alt="decorative illustration of a crystal" />
+</figure>
+
 <section class=" about-hero">
     <div class="left section-container">
         <h1>Why Magenta</h1>
@@ -32,6 +38,10 @@ $headshot = 'http://localhost:10038/wp-content/uploads/2024/04/melanie-headshot_
         <p>Being a single mother in the midst of a global pandemic meant my dream of sharing my bars got put on hold for a few years, but by 2023 the pull was too strong and I couldn’t ignore what was moving my heart so intensely. Inspired by the healing nature of crystals, especially quartz, I knew I wanted these bars to be heart-warming vessels of connection, both within yourself and with the universe.</p>
     </div>
 </section>
+
+
+
+</main>
 
 
 <?php			

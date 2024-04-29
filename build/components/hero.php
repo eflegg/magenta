@@ -17,7 +17,7 @@ $bgImage = 'http://localhost:10038/wp-content/uploads/2024/04/watercolourbg-scal
  		
 	<div class="hero-content">
 		<figure class="hero-crystal">
-		<img src="<?php bloginfo('template_url'); ?>/images/svg/crystal-1.svg" />
+		<img src="<?php bloginfo('template_url'); ?>/images/svg/crystal-1.svg" alt="decorative illustration of a crystal"/>
 		</figure>
 		<div class="hero-text">
 
