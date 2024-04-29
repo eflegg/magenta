@@ -1,0 +1,32 @@
+.contact-hero {
+    height: 89vh;
+    h1 {
+        color: $purple;
+        position: relative;
+        width: 60%;
+    }
+    p{
+        width: 60%;
+        @include media(md){
+            font-size: 3rem;
+            width: 45%;
+        }
+    }
+}
+
+.contact {
+    .section-three {
+        @include media(md){
+            display: flex;
+            
+        }
+    }
+    .right {
+        display: none;
+        @include media(md){
+            display: block;
+        }
+    }
+}
+
+

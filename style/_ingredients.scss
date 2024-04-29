@@ -1,0 +1,48 @@
+.ingredients-hero {
+    height: 89vh;
+    h1 {
+        color: $purple;
+        position: relative;
+        transform: translateY(50%);
+        @include media(md){
+            width: 50%;
+        }
+    }
+}
+
+.ingredients-grid {
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    figure {
+        height: 21.5rem;
+        @include media(sm){
+            height: 30rem;
+        }
+        @include media(lg){
+            height: 40rem;
+        }
+        img {
+            width: auto;
+            margin: 0 auto;
+            object-fit: contain;
+        }
+    }
+    li {
+       text-align: center;
+    }
+
+    @include media(sm){
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        li {
+            width: 45%;
+            text-align: left;
+        }
+    }
+}
+
+

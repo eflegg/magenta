@@ -174,7 +174,19 @@ h5, .h5 {
 
 .headline-sans {
 	@include bodyText();
-	
+}
+.large-paragraph {
+	font-weight: 300;
+	@include media(md){
+		font-size: 3.6rem;
+		line-height: 105%;
+	}
+	@include media(lg){
+		font-size: 4.2rem;
+	}
+	@include media(xl){
+		font-size: 4.8rem;
+	}
 }
 
 

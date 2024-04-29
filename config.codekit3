@@ -439,19 +439,6 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/images\/images\/davies-designs-studio-IXURbdQ63g4-unsplash.jpeg" : {
-      "ft" : 16384,
-      "iS" : 4060736,
-      "jF" : 0,
-      "oA" : 0,
-      "oAP" : "\/build\/images\/images\/davies-designs-studio-IXURbdQ63g4-unsplash.jpg",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 1,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
     "\/images\/images\/emily-karakis-5oyTdF9zuxs-unsplash.jpeg" : {
       "ft" : 16384,
       "iS" : 1478892,
@@ -484,6 +471,19 @@
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/build\/images\/images\/ingredients-bg.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/images\/images\/ingredients-page-hero.jpeg" : {
+      "ft" : 16384,
+      "iS" : 286889,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/images\/images\/ingredients-page-hero.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 1,
@@ -688,6 +688,16 @@
       "miP" : 0,
       "oA" : 2,
       "oAP" : "\/build\/images\/svg\/background-crystal.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/images\/svg\/contact-crystal.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/build\/images\/svg\/contact-crystal.svg",
       "oF" : 0,
       "opt" : 0,
       "plM" : 52780316221407,
@@ -1302,6 +1312,14 @@
       "oAP" : "\/build\/page-about.php",
       "oF" : 0
     },
+    "\/page-contact.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/page-contact.php",
+      "oF" : 0
+    },
     "\/page-custom-shop.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -1316,6 +1334,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/build\/page-home.php",
+      "oF" : 0
+    },
+    "\/page-ingredients.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/page-ingredients.php",
       "oF" : 0
     },
     "\/page.php" : {
@@ -1632,6 +1658,21 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/style\/_contact.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 0,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/style\/_contact.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/style\/_home.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -1642,6 +1683,21 @@
       "ma" : 0,
       "oA" : 1,
       "oAP" : "\/build\/style\/_home.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/style\/_ingredients.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 0,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/style\/_ingredients.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
