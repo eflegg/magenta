@@ -20,19 +20,23 @@ $heroBg = 'http://localhost:10038/wp-content/uploads/2024/04/contact-bg.jpg';
     <p class=""><?php echo get_the_excerpt();?></p>
 </section>
 
-<section class="section-container section-two">
-   <h2 class="headline-sans">
-   Explore the answers to some common questions on the blog
-   </h2>
-   <a href="#" class="btn--arrow">Go to the blog</a>
-    
-</section>
 
 <section class="section-container section-three">
     <div class="left">
-        <h2 class="headline-sans">
+    <article class="section-two top">
+        <h3 class="headline-sans">
+        Explore the answers to some common questions on the blog
+        </h3>
+        <a href="#" class=" btn-arrow">Go to the blog</a>
+    </article>
+    <article>
+        <h3 class="headline-sans">
             Or reach out directly
-        </h2>
+        </h3>
+    </article>
+    <article>
+        <?php echo do_shortcode('[ninja_form id=1]');?>
+    </article>
     </div>
     <div class="right">
         <figure>
@@ -40,6 +44,7 @@ $heroBg = 'http://localhost:10038/wp-content/uploads/2024/04/contact-bg.jpg';
         </figure>
     </div>
 </section>
+
 
 
 

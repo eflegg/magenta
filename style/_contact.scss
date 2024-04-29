@@ -16,15 +16,38 @@
 
 .contact {
     .section-three {
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+    h3, p {
+        color: $purple;
+    }
+    .section-three {
         @include media(md){
             display: flex;
-            
+            // align-items: flex-start;
         }
-    }
-    .right {
-        display: none;
-        @include media(md){
-            display: block;
+        .left {
+          
+            @include media(md){
+                width: 50%;
+                margin-right: 2rem;
+            }
+            .top {
+                margin-bottom: 7rem;
+                @include media(md){
+                    margin-bottom: 15rem;
+                }
+            }
+        }
+        .right {
+         
+            display: none;
+            @include media(md){
+                display: block;
+                position: relative;
+                top: 7rem;
+            }
         }
     }
 }
