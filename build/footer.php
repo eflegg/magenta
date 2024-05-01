@@ -11,6 +11,9 @@ $bgImage = get_field('footer_image', 'options');
 		<div class="footer--inner display-flex section-container">
 			<div class="newsletter-signup">
 				<p class="headline-sans h3 light-text">Ready to make the connection?</p>
+				<article>
+        			<?php echo do_shortcode('[ninja_form id=2]');?>
+    			</article>
 			</div>
 			<div class="footer-nav">
 				<nav class="footer-nav"
@@ -18,7 +21,7 @@ $bgImage = get_field('footer_image', 'options');
 					<?php
 					wp_nav_menu( array(
 					'theme_location' => 'footfirst',
-					'menu_class' => 'footer'
+					'menu_class' => 'footer-ul'
 					) );
 					?>
 				</nav >
