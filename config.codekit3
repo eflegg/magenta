@@ -163,6 +163,22 @@
       "oAP" : "\/build\/builtins\/single.php",
       "oF" : 0
     },
+    "\/category.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/category.php",
+      "oF" : 0
+    },
+    "\/components\/cards\/blog-card.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/components\/cards\/blog-card.php",
+      "oF" : 0
+    },
     "\/components\/cards\/testimonial-card.php" : {
       "cB" : 0,
       "ft" : 8192,

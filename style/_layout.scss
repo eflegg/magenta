@@ -31,6 +31,7 @@
 
 //Footer {
 	.footer {
+		overflow: hidden;
 		nav {
 			height: 100%;
 		}
@@ -40,11 +41,23 @@
 		.footer--inner {
 			@include media(md){
 				display: flex;
+				justify-content: space-between;
 			}
 			&.section-container {
 				padding-bottom: 0;
 			}
 		
+		}
+		figure {
+			position: absolute;
+			bottom: -7rem;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+		.newsletter-signup {
+			@include media(md){
+				width: 50%;
+			}
 		}
 		.footer-ul {
 			padding-left: 0;
@@ -65,7 +78,7 @@
 		}
 
 		.legal {
-			background-color: $charcoal;
+			background-color: $magenta;
 			.legal-inner{
 			p{
 				color:$white;
