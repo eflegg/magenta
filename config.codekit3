@@ -1338,6 +1338,14 @@
       "oAP" : "\/build\/page-about.php",
       "oF" : 0
     },
+    "\/page-blog.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/page-blog.php",
+      "oF" : 0
+    },
     "\/page-contact.php" : {
       "cB" : 0,
       "ft" : 8192,

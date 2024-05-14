@@ -8,9 +8,16 @@
 stored in three variables, or array list. use those values to 
 query posts. Relationship field for featured post
 
-need the whole category because need slug and name
+need the whole category because need slug and name - relationship field?
 
 -->
+
+<?php
+$categoryList - the_field('category_selector');
+print_r($categoryList);
+?>
+
+
 		
 
 <!-- Blog Category 1 -->

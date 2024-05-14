@@ -1,5 +1,9 @@
 <?php
 
+/*
+Template Name: Category Blog Page
+*/
+
 
 get_header(); ?>
 

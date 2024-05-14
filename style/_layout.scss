@@ -1,15 +1,13 @@
 
 
 
-.custom-container {
-	margin: 0 auto;
-	max-width: 140rem;
-	border: 2px solid hotpink;
-}
+
 
 .section-container {
+	margin: 0 auto;
+	max-width: 140rem;
+	
 	position: relative;
-
 	padding: 3.25rem 2rem;
 	@include media(sm){
 		padding: 7rem 3rem;
@@ -20,12 +18,30 @@
 	@include media(lg){
 		padding: 12.5rem 8.25rem
 	}
-	&.has-filter-container{
-		padding-top: 16rem;
-		
-		@include media(lg){
-			padding: 12.5rem 8.25rem
+	&.no-side-pad {
+		padding: 3.25rem 0;
+		@include media(sm){
+			padding: 7rem 0;
 		}
+		@include media(md){
+			padding: 8.25rem 0;
+		}
+		@include media(lg){
+			padding: 12.5rem 0;
+		}
+	}
+	&.no-topbottom-pad {
+
+		padding: 0 2rem;
+	@include media(sm){
+		padding: 0 3rem;
+	}
+	@include media(md){
+		padding: 0 6rem;
+	}
+	@include media(lg){
+		padding: 0 8.25rem
+	}
 	}
 }
 

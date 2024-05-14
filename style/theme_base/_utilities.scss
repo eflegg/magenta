@@ -61,7 +61,8 @@ ul {
     margin-top: 0;
 }
 .no-bottom {
-    margin-bottom: 0;
+    margin-bottom: 0!important;
+    padding-bottom: 0!important;
 }
 .text-center {
     text-align: center;
