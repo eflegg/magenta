@@ -312,7 +312,7 @@ header {
 	//from scratch hamburger menu
 .btn-nav {
    border: 0px;
-	position: absolute;
+	position: absolute!important;
 	width: 8rem;
 	height: 5rem;
 	z-index: 50;
@@ -321,7 +321,7 @@ header {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	background-color: transparent;
+	background-color: transparent!important;
 	&:hover {
 		background-color: transparent;
 		border: 0px;
@@ -333,8 +333,8 @@ header {
 		width: 7rem;
 		height: 0.2rem;
 		border-radius: .5rem;
-		margin-bottom: .5rem;
-		margin-top: 0.5rem;
+		margin-bottom: .5rem!important;
+		margin-top: 0.5rem!important;
 		background: $darkMagenta;
 	
 	}

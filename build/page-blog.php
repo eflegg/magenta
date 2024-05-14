@@ -52,11 +52,6 @@ Template Name: Blog
         <?php wp_reset_postdata(); ?>
     <?php endif; ?>	 			    
 
-
-
-
-
-
   
 
 </section>
