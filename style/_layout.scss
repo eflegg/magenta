@@ -45,6 +45,21 @@
 	}
 }
 
+.section-container__post {
+	p {
+		width: 90%;
+		margin: 2rem auto;
+		@include media(sm){
+			width: 80%;
+		}
+		@include media(md){
+			width: 70%;
+			max-width: 130rem;
+		}
+	
+	}
+}
+
 //Footer {
 	.footer {
 		overflow: hidden;

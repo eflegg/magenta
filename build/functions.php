@@ -42,6 +42,14 @@ function themename_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	/**
+	 * Enable support for wide width images
+	 *
+	 * 
+	 */
+
+	add_theme_support( 'align-wide' );
+
+	/**
 	 * This theme uses wp_nav_menu() in one location.
 	 */
 	register_nav_menus( array(

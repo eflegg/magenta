@@ -132,12 +132,6 @@ h5, .h5 {
 
 .default-type {
 	color: $charcoal;
-	&.resources, &.blue {
-		h1, h2, h3, h4, h5, h6 {
-			color: #3674D9;
-		}
-		
-	}
 	h1, h2, h3, h4, h5, h6 {
 		color: $darkMagenta;
 	}
@@ -155,6 +149,7 @@ h5, .h5 {
 	}
 	
 }
+
 
 .light-text {
 	color: $lightPeach;

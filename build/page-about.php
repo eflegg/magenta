@@ -18,7 +18,7 @@ $headshot = 'http://localhost:10038/wp-content/uploads/2024/04/melanie-headshot_
 <img src="<?php bloginfo('template_url'); ?>/images/svg/background-crystal.svg"  alt="decorative illustration of a crystal" />
 </figure>
 
-<section class="about-hero">
+<section class="hero">
     <div class="left section-container">
         <h1>Why Magenta</h1>
         <p>One day, I heard the word in my head as if by magic and my intuition knew right away that was it. 
