@@ -416,6 +416,19 @@ function mytheme_add_woocommerce_support() {
 }
 add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
 
+
+function get_product_tab_templates_displayed() {
+    wc_get_template( 'single-product/tabs/description.php' );
+
+
+}
+function removing_product_tabs(){
+    remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
+	remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+	add_action( 'woocommerce_after_main_content', 'get_product_tab_templates_displayed', 10 );
+}
+add_action( 'woocommerce_after_single_product_summary', 'removing_product_tabs', 2 );
+
 // Filter except length to 35 words.
 // tn custom excerpt length
 function tn_custom_excerpt_length( $length ) {

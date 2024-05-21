@@ -34,7 +34,7 @@ $bgImage = get_field('footer_image', 'options');
 		<div class="legal">
 			<div class="legal-inner">
 				<p class="">&copy; Magenta <?php the_time('Y'); ?> </p>
-				<p class="harc-attribution">Site Design by Flegg Creative</p>
+				<p class="harc-attribution">Site by Flegg Creative</p>
 			</div>
 		</div>
 		

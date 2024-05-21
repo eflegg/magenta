@@ -2222,6 +2222,14 @@
       "oAP" : "\/build\/woocommerce\/single-product.php",
       "oF" : 0
     },
+    "\/woocommerce\/single-product\/tabs\/description.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/woocommerce\/single-product\/tabs\/description.php",
+      "oF" : 0
+    },
     "\/wp_bootstrap_navwalker.php" : {
       "cB" : 0,
       "ft" : 8192,

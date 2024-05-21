@@ -41,16 +41,116 @@ get_header( 'shop' ); ?>
 
 			<?php wc_get_template_part( 'content', 'single-product' ); ?>
 
-		<?php endwhile; // end of the loop. ?>
+	
 
+			
+					<?php
+						$image = get_field('full_width_product_image');?>
+					<?php
+						if (!empty($image)):
+						$size = 'full'; ?>
+			
+					<figure class="full-width">
+						<?php
+						if ($image) {
+							echo wp_get_attachment_image($image['ID'], $image['alt'], $size, $attr['class'] = 'full-width__image');
+						}
+						?>
+					</figure>
+					<?php endif;?>
+			
+		<?php endwhile; // end of the loop. ?>
+		
 	<?php
 		/**
 		 * woocommerce_after_main_content hook.
 		 *
 		 * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
 		 */
+	
 		do_action( 'woocommerce_after_main_content' );
 	?>
+
+			<div class="product_custom-fields">
+				<h2 class="section-container no-top no-bottom">Wholesome ingredients</h2>
+					
+					<section class="section-container featured-ingredients">
+
+						<?php 
+
+						$ingredients = get_field('linked_ingredients');
+
+						?>
+						<?php if( $ingredients ): ?>
+							<ul class="ingredients-grid single-product">
+							<?php foreach( $ingredients as $ingredient ): ?>
+								<?php
+									$title = get_field( 'ingredient_name', $ingredient->ID );
+									$description = get_field('ingredient_description', $ingredient->ID);
+									$image = get_field('ingredient_image', $ingredient->ID);
+								?>
+								<!-- ingredient card -->
+								<li class="ingredient-card">
+								<?php
+									if (!empty($image)):
+									$size = 'full'; ?>
+						
+								<figure class="full-width">
+									<?php
+									if ($image) {
+										echo wp_get_attachment_image($image['ID'], $image['alt'], $size, $attr['class'] = 'full-width__image');
+									}
+									?>
+								</figure>
+								<?php endif;?>
+									<h3><?php echo $title; ?></h3>
+									<p><?php echo $description; ?></p>
+								</li>
+							<?php endforeach; ?>
+							</ul>
+							<?php
+							$ingredientsLink = home_url('/ingredients');
+							?>
+							<a href="<?php echo $ingredientsLink;?>" class="btn mt-20">read more about ingredients</a>
+						<?php endif; ?>
+
+					</section>
+					<section class="section-container no-top accordion">
+						<?php
+						$accordion = get_field('accordion');
+						if($accordion):?>
+						<?php
+						$productDetails = $accordion['product_details'];
+						$whatsNot = $accordion['what_not_in_magenta'];
+						$howToUse = $accordion['how_to_use'];
+						?>
+						<ul class="accordion-list">
+							<li aria-expanded="false" class="accordion-item">
+							<button  class="item--inner display-flex justify-space-between">
+									<p>Product Details</p>
+									<figure class="icon">icon</figure>
+								</button>
+								<p class="answer"><?php echo $productDetails;?></p>
+							</li>
+							<li aria-expanded="false" class="accordion-item">
+								<button class="item--inner display-flex justify-space-between">
+									<p>What's not in Magenta bars</p>
+									<figure class="icon">icon</figure>
+								</button>
+								<p class="answer"><?php echo $whatsNot;?></p>
+							</li>
+							<li aria-expanded="false" class="accordion-item">
+							<button class="item--inner display-flex justify-space-between">
+									<p>How to use</p>
+									<figure class="icon">icon</figure>
+								</button>
+								<p class="answer"><?php echo $howToUse;?></p>
+							</li>
+						</ul>
+						<?php endif;?>
+					</section>
+			
+				</div>
 
 </div>
 

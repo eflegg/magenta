@@ -3,30 +3,31 @@ document.addEventListener("DOMContentLoaded", function() {
  
 
 
-setTimeout(function(){
-    $('.home-video').addClass('fading');
-}, 3300);
+// setTimeout(function(){
+//     $('.home-video').addClass('fading');
+// }, 3300);
 
-setTimeout(function(){
-    $('.home-video').addClass('hidden');
-}, 4000);
+// setTimeout(function(){
+//     $('.home-video').addClass('hidden');
+// }, 4000);
 
-$(".fade-me").waypoint(function(){
-   $(this[0,'element']).addClass("faded-in");
-}, {
-    offset: "80%"
-});
+// $(".fade-me").waypoint(function(){
+//    $(this[0,'element']).addClass("faded-in");
+// }, {
+//     offset: "80%"
+// });
 
-$('.menu-toggle').click(function() {
-    $('body').toggleClass('drawer-open');
-});
+// $('.menu-toggle').click(function() {
+//     $('body').toggleClass('drawer-open');
+// });
 
-$('nav .cta').click(function() {
-    document.querySelector('.cta-block').scrollIntoView({ 
-      behavior: 'smooth' 
-    });
-    return false;
-});
+// $('nav .cta').click(function() {
+//     document.querySelector('.cta-block').scrollIntoView({ 
+//       behavior: 'smooth' 
+//     });
+//     return false;
+// });
+
 
 
 
@@ -83,11 +84,43 @@ $('nav .cta').click(function() {
   // window.addEventListener("load", initSlider);
 
 
+//add aria labels to this
 
+// const allAnswers = document.querySelector('.answer');
+const accordionItems = document.querySelectorAll('.accordion-item');
 
+// accordionItems.forEach((item)=> {
+// const answer = item.querySelector(".answer")
+//   item.addEventListener("click", ()=>{
+//     allAnswers.classList.remove('open');
+//     if(answer.classList.contains('open')){
+//       answer.classList.remove("open");
+//     } else {
+//       answer.classList.add("open");
+//     }
+//   })
 
+// }
+// )
+const remove = () => {
+  accordionItems.forEach(el => {
+    el.setAttribute('aria-expanded', 'false');
+    console.log('remove fired');
+  })
+}
+function toggleAccordion(){
 
+  if(this.ariaExpanded === "false"){
+    remove();
+    this.setAttribute('aria-expanded', 'true');
+  } else {
+    remove();
+    this.setAttribute('aria-expanded', 'false');
+  }
+ 
+}
 
+accordionItems.forEach(item => item.addEventListener('click', toggleAccordion));
 
 
 
@@ -308,37 +341,7 @@ document.addEventListener("keydown", (event) => {
 
 
 
-  //tabs
 
-//add active class to first child of dynamic list, both panes and tabs
-const firstTabPanel = document.querySelector('.tab-content').firstElementChild;
-firstTabPanel.classList.add('active-tab');
-
-const firstTab = document.querySelector('.tab-nav').firstElementChild;
-firstTab.classList.add('active-tab');
-
-function onTabClick(event) {
-  let activeTabs = document.querySelectorAll('.active-tab');
-
-
-  // deactivate existing active tab and panel 
-  activeTabs.forEach(function(tab) {
-    tab.className = tab.className.replace('active-tab', '');
-  });
-
-  // find closes li to clicked item and either remove or add active class
-  event.target.closest('li').className += ' active-tab';
-
-   // get the element with the id that matches the data attr of clicked item
-  document.getElementById(event.target.getAttribute('data-link')).className += ' active-tab';
-
-
-}
-
-const element = document.getElementById('nav-tab');
-
-element.addEventListener('focusin', onTabClick, false);
-element.addEventListener('click', onTabClick, false);
 
 
 });

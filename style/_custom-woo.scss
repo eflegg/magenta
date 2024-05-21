@@ -1,14 +1,23 @@
 .custom-woo-container{
     // border: 2px solid orangered;
+    .product {
+        @include media(md){
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+    }
     .summary {
+        float: none!important;
         padding: 2rem;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-end;
         // border: 2px solid olive;
-        margin-top: auto;
+        margin-top: 15%;
         @include media(md){
+            margin-top: 5%;
             height: 80vh;
            width: 43%!important;
         
@@ -76,9 +85,12 @@
     }
     .related {
         border: 2px solid slateblue;
+        // display: none;
+        // visibility: hidden;
     }
     .woocommerce-tabs {
         border: 2px solid goldenrod;
+      
     }
     .woocommerce-product-gallery {
         // border: 3px solid blue;
@@ -99,7 +111,7 @@
         .woocommerce-product-gallery__wrapper {
             max-height: 100%;
             // border: 2px solid red;
-            overflow: hidden;
+            // overflow-y: hidden;
             img {
                 object-fit: cover;
                 transform: translateY(5%);
@@ -113,4 +125,82 @@
 			}
         }
     }
+    .product_custom-fields {
+    }
+    .full-width {
+        margin-top: 5rem;
+    }
+    .description_custom-location {
+        p {
+            font-size: 2.8rem;
+            @include media(md){
+                font-size: 3.6rem;
+            }
+            @include media(lg){
+                font-size: 4rem;
+            }
+        }
+    }
+    .accordion {
+        
+        .accordion-list {
+            background: white;
+            padding-left: 0;
+            .accordion-item {
+                cursor: pointer;
+                &[aria-expanded="false"]{
+                    overflow: hidden;
+                    .answer{
+                        padding: 3rem;
+                        position: absolute;
+                        visibility: hidden;
+                        opacity: 0;
+                        overflow: hidden;
+                        transition: all .25s ease-in-out;
+                        height: 0%;
+                    }
+                }
+                &[aria-expanded="true"]{
+                    overflow: visible;
+                    .answer{
+                        position: relative;
+                        opacity: 1;
+                        visibility: visible;
+                        overflow: visible;
+                        height: 100%;
+                        transition: all .25s ease-in-out;
+                    }
+                }
+            }
+            .item--inner, .answer {
+                width: 100%;
+                padding: 3rem;
+                border: 1px solid $charcoal;
+                margin: 0;
+            }
+            .item--inner[aria-expanded="false"]{
+                overflow: hidden;
+              
+            }
+            .item--inner[aria-expanded="true"]{
+                overflow: hidden;
+              
+            }
+           .answer {
+           
+            &.open {
+             
+           
+            }
+           }
+        }
+
+
+
+        
+    }
+   
 }
+
+
+
