@@ -149,6 +149,11 @@ get_header( 'shop' ); ?>
 						</ul>
 						<?php endif;?>
 					</section>
+					<section class="section-container">
+						<h3 class="h1 text-center">
+							Open your heart and drink in this glorious day
+						</h3>
+					</section>
 			
 				</div>
 
