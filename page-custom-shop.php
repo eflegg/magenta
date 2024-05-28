@@ -59,11 +59,30 @@ $args =  array(
         <?php wp_reset_postdata(); ?>
     <?php endif; ?>	 			    
 
-  
-
 </section>
 
+<?php
+if( false === wp_script_is( 'single-filter', 'enqueued' ) ){
+    echo '<h2>not working</h2>';
+}
+?>
+
 <section class="section-container">
+
+<?php if( is_active_sidebar( 'shop-page-before-content-widget-area' ) ) : ?>
+	<aside class="shop-page-before-content-widget-area">
+        <h2>new widget</h2>
+		<?php dynamic_sidebar( 'shop-page-before-content-widget-area' ); ?>
+	</aside>
+<?php endif; ?>
+
+<?php 
+            $dataType = "product"; 
+            $category = "Bars";
+            $path = "components/cards/blog-card.php";
+            ?>
+        <?php include 'components/reusable-filter.php';?>
+
 <ul class="card-container section-container">
         
 <?php
@@ -73,7 +92,7 @@ $args =  array(
         'orderby' => 'menu_order',
         'order' => 'ASC',
         'posts_per_page' => -1,
-        
+      
     );
 
     $the_query = new WP_Query( $args ); ?>

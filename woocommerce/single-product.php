@@ -149,6 +149,8 @@ get_header( 'shop' ); ?>
 						</ul>
 						<?php endif;?>
 					</section>
+
+					<!-- make this a custom field -->
 					<section class="section-container">
 						<h3 class="h1 text-center">
 							Open your heart and drink in this glorious day

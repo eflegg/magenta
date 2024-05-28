@@ -318,7 +318,7 @@ header {
 	z-index: 50;
 	right: 0rem;
 	top: -1rem;
-	display: flex;
+	display: flex!important;
 	flex-direction: column;
 	justify-content: center;
 	background-color: transparent!important;

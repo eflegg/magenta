@@ -88,6 +88,14 @@ function themename_widgets_init() {
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
 	) );
+	register_sidebar( array(
+		'name' => __( 'Custom Shop Page Before Content', 'themename' ),
+		'id' => 'shop-page-before-content-widget-area',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3 class="widgettitle">',
+		'after_title' => '</h3>'
+	));
 }
 add_action( 'widgets_init', 'themename_widgets_init' );
 
@@ -99,27 +107,9 @@ add_action( 'widgets_init', 'themename_widgets_init' );
 
 function themename_scripts() {
 
-	if(is_page_template('page-secondlevel.php') ) {
-		wp_enqueue_script('tab-block-func', get_template_directory_uri() . '/js/tab-block-func.js');
-	}
-	if(is_page_template('single-post.php') ) {
-		wp_enqueue_script('tab-block-func', get_template_directory_uri() . '/js/tab-block-func.js');
-	}
-	if(is_page_template('single-question.php') ) {
-		wp_enqueue_script('tab-block-func', get_template_directory_uri() . '/js/tab-block-func.js');
-	}
+	
+	wp_enqueue_script('single-filter', get_template_directory_uri() . '/js/single-filter.js');
 
-
-	if(is_page('resources') ) {
-		wp_enqueue_script('multi-filter', get_template_directory_uri() . '/js/multi-filter.js');
-	}
-
-	if(is_page('questions-answered') ) {
-		wp_enqueue_script('single-filter', get_template_directory_uri() . '/js/single-filter.js');
-	}
-	// if(is_home()) {
-	// 	wp_enqueue_script('single-filter', get_template_directory_uri() . '/js/single-filter.js');
-	//}
 	if(is_page_template('page-updates.php') ) {
 		wp_enqueue_script('single-filter', get_template_directory_uri() . '/js/single-filter.js');
 	}
@@ -445,18 +435,7 @@ if( function_exists('acf_add_options_page') ) {
 //theme support for post excerpts
 add_post_type_support( 'page', 'excerpt' );
 
-//use one single template for resources and questions custom post types
-add_filter( 'template_include', function( $template ) 
-{
-    // your custom post types
-    $my_types = array( 'resource', 'question' );
-    $post_type = get_post_type();
 
-    if ( ! in_array( $post_type, $my_types ) )
-        return $template;
-
-    return get_stylesheet_directory() . '/single-question.php'; 
-});
 
 
 //resusable custom post filter
@@ -509,59 +488,6 @@ add_filter( 'pll_the_languages_args', function( $args ) { $args['display_names_a
 
 
 
-//try ajax multi again
-
-
-
-function rudr_ajax_search_filter() {
-
-	$form_data = json_decode( file_get_contents( "php://input" ), true );
-	// print_r($form_data);
-
-	//this is how you implode an array with numerical values
-	// $imploded_filtered = implode(", ", array_map('intval', $filtered_form_data));
-
-	//removes empty values
-	$filtered_form_data = array_filter($form_data);
-	$imploded_cat_names = implode( '+', $filtered_form_data);
-
-
-	// print_r($imploded_cat_names);
-	
-	
-  
-	$ajaxpostsMulti = new WP_Query(array(
-	  'post_type' => "resource",
- 	  'posts_per_page' => -1,
-	  'category_name' => $imploded_cat_names,
-	  'orderby' => 'menu_order', 
-	  'order' => 'desc',
-	));
-	$response = '';
-
-
-	
-	if($ajaxpostsMulti->have_posts()) {
-	  while($ajaxpostsMulti->have_posts()) : $ajaxpostsMulti->the_post();
-	
-	  $response .= include 'components/cards/resource-card.php';
-
-	  endwhile;
-	  wp_reset_postdata();
-	}  
-	else {
-	  $response = 'empty multi';
-	}
-  
-	// echo $response;
-
-
-	die;
-
-}
-
-add_action( 'wp_ajax_ajaxfilter2', 'rudr_ajax_search_filter' );
-add_action( 'wp_ajax_nopriv_ajaxfilter2', 'rudr_ajax_search_filter' );
 
 
 function rudr_ajax_filter_by_category() {
@@ -569,14 +495,12 @@ function rudr_ajax_filter_by_category() {
 	$obj = json_decode( file_get_contents( "php://input" ), true );
 	$catSlug = $obj['cat'];
 	$postType =$obj['dataType'];
-	// print_r($obj);
-	// print_r($catSlug);
-	// print_r($postType);
+
   
 	$ajaxposts = new WP_Query([
 	  'post_type' => $postType,
 	  'posts_per_page' => -1,
-	  'category_name' => $catSlug,
+	  'product_cat' => $catSlug,
 	  'orderby' => 'menu_order', 
 	  'order' => 'desc',
 	]);
@@ -586,15 +510,7 @@ function rudr_ajax_filter_by_category() {
 	
 	if($ajaxposts->have_posts()) {
 	  while($ajaxposts->have_posts()) : $ajaxposts->the_post();
-	  if($postType == 'question'){
-		  $response .= include 'components/cards/question-card.php';
-	  } else if($postType == 'resource'){
-		$response .= include 'components/cards/resource-card.php';
-	  } else if ($postType == 'post') {
-		$response .= include 'components/cards/update-card.php';
-	  } else null;
-	  
-		
+		  $response .= include 'components/cards/blog-card.php';
 		
 	  endwhile;
 	  wp_reset_postdata();
@@ -608,8 +524,18 @@ function rudr_ajax_filter_by_category() {
 	// exit;
 	die;
 
+	
+
+
 
 
 }
 add_action( 'wp_ajax_ajaxfilter', 'rudr_ajax_filter_by_category' );
 add_action( 'wp_ajax_nopriv_ajaxfilter', 'rudr_ajax_filter_by_category' );
+
+
+
+
+
+
+

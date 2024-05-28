@@ -1,7 +1,7 @@
  
  document.addEventListener("DOMContentLoaded", function() {
 
-    console.log('single filter');
+
  
  //single filter
  const ajaxFilter = document.getElementById( 'ajax-filter' )
@@ -23,7 +23,7 @@
      // body: JSON.stringify( Object.fromEntries( formData.entries(),  ) ),
          body: JSON.stringify( { 
              'cat' : event.target.value,
-       'dataType' : postType
+             'dataType' : postType
        
          } ),
      
@@ -35,7 +35,7 @@
              cardContainer.innerHTML = response;
          }
      
-         console.log('response ', response );
+         console.log('response: ', response );
      console.log(postType);
      
     
