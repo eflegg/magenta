@@ -5,7 +5,6 @@
 
 <div class="ajax-filters filter-by-category <?php echo $filterClass;?>">
 	<form class="category-form" id="ajax-filter">
-		<h2 class="h3">Filter by Category</h2>
 
 
 
@@ -23,7 +22,7 @@
 <?php foreach($parent_cat as $catVal):?>  
 
 	<?php if($catVal->name == $category) :?>
-		<h3><?php echo $catVal->name;?></h3>
+		<!-- <h3><?php echo $catVal->name;?></h3> -->
 
 		
 	
@@ -35,13 +34,22 @@
 		$child_cat = get_terms( 'product_cat', $child_arg );?>
 	
 
-		<select data-type=<?php echo $dataType;?> class="cat-select" name="categories" id="cat-select">
-		<!-- <option data-slug="" data-type=<?php echo $dataType;?> class="cat-list_item" value="Choose a category">Category</option> -->
-		<option data-slug="" data-type=<?php echo $dataType;?> class="cat-list_item active" value="<?php echo $catVal->slug; ?>">All categories</option>
+	
+
+	<div data-type=<?php echo $dataType;?> class="cat-select" name="categories" id="cat-select">
+
+	<label for="all-cats" class="cat-label active">
+
+	<input type="radio" name="cat-option" id="all-cats" data-type=<?php echo $dataType;?> class="cat-list_item active" value="<?php echo $catVal->slug; ?>">All categories</input>
+	</label>
+		
+		
 		<?php foreach($child_cat as $child_term):?>
-			<option data-type=<?php echo $dataType;?> data-slug="<?= $child_term->slug; ?>" class="cat-list_item"  value="<?php echo $child_term->slug; ?>"><?php echo $child_term->name; ?></option>
+			<label for="<?= $child_term->slug; ?>" class="cat-label">
+			<input name="cat-option" id="<?= $child_term->slug; ?>" type="radio" data-type=<?php echo $dataType;?> data-slug="<?= $child_term->slug; ?>" class="cat-list_item"  value="<?php echo $child_term->slug; ?>"><?php echo $child_term->name; ?></input>
+			</label>
 		<?php endforeach ;?>
-	</select>
+		</div>
 
 
 		<?php endif;?>
@@ -51,6 +59,12 @@
 	</div>
 
 
-
-
+<!-- select element filter -->
+	<!-- <select data-type=<?php echo $dataType;?> class="cat-select" name="categories" id="cat-select">
+		
+		<option data-slug="" data-type=<?php echo $dataType;?> class="cat-list_item active" value="<?php echo $catVal->slug; ?>">All categories</option>
+		<?php foreach($child_cat as $child_term):?>
+			<option data-type=<?php echo $dataType;?> data-slug="<?= $child_term->slug; ?>" class="cat-list_item"  value="<?php echo $child_term->slug; ?>"><?php echo $child_term->name; ?></option>
+		<?php endforeach ;?>
+	</select> -->
 	

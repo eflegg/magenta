@@ -141,7 +141,7 @@
 .blog-cat {
 
 	text-align: center;
-	&:first-child {
+	&:nth-child(2) {
 		.card-container {
 			background-color: $lightGold;
 		}
@@ -149,6 +149,7 @@
 	&:last-child {
 		.card-container {
 			background-color: $darkPeach;
+			margin-bottom: 15rem;
 		}
 	}
 	.cat-archive-link {
@@ -222,11 +223,46 @@
 
 //Filter
 
-select {
-    display:table-row;
-}
-option {
-    display:table-cell;
+.category-form {
+	.cat-select {
+		text-align: right;
+	}
+	label {
+		position: relative;
+		font-size: 2rem;
+		margin-left: 2rem;
+		&.active  {
+			&:after {
+				content: "";
+				position: absolute;
+				left: 0;
+				bottom: -.5rem;
+				width: 95%;
+				height: 0.1rem;
+				background-color: $charcoal;
+
+			}
+		}
+	}
+	input[type="radio"]{
+		
+		position: absolute;
+		width: 100%;
+		opacity: 0;
+		display: none;
+		// position: relative;
+		// &:after {
+		
+		// 	content: "";
+		// 	position: absolute;
+		// 	left: 0;
+		// 	bottom: -2.5rem;
+		// 	width: 80%;
+		// 	height: 0.2rem;
+		// 	background-color: blue;
+		// }
+		
+	}
 }
 
 

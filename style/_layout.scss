@@ -67,7 +67,7 @@
 			height: 100%;
 		}
 		position: relative;
-		background-color: $magenta;
+		background-color: $darkMagenta;
 		
 		.footer--inner {
 			@include media(md){
@@ -109,7 +109,7 @@
 		}
 
 		.legal {
-			background-color: $magenta;
+			background-color: $darkMagenta;
 			.legal-inner{
 			p{
 				color:$white;

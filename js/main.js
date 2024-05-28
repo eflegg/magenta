@@ -86,22 +86,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //add aria labels to this
 
-// const allAnswers = document.querySelector('.answer');
 const accordionItems = document.querySelectorAll('.accordion-item');
 
-// accordionItems.forEach((item)=> {
-// const answer = item.querySelector(".answer")
-//   item.addEventListener("click", ()=>{
-//     allAnswers.classList.remove('open');
-//     if(answer.classList.contains('open')){
-//       answer.classList.remove("open");
-//     } else {
-//       answer.classList.add("open");
-//     }
-//   })
-
-// }
-// )
 const remove = () => {
   accordionItems.forEach(el => {
     el.setAttribute('aria-expanded', 'false');

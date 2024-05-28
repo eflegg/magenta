@@ -1,3 +1,7 @@
+
+
+
+
 .nf-error-msg .nf-error-field-errors {
 	display: none;
 }
@@ -14,6 +18,7 @@ form {
 	.nf-field-label label {
 		@include bodyText();
 		font-weight: 500;
+		color: $lightPeach;
 	}
 	
 	input, textarea {
