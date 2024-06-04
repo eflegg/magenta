@@ -7,7 +7,7 @@ Template Name: Single Post
 get_header(); ?>
 	<?php while ( have_posts() ) : the_post();?>
 
-	<main id="main" class="site-main" role="main">
+	<main id="main" class="site-main main-content" role="main">
 
 
 <?php 

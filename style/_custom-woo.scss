@@ -204,3 +204,36 @@
 
 
 
+//checkout
+
+.wc-block-components-title.wc-block-components-title {
+    font-size: 2.4rem!important;
+}
+.wc-block-components-checkout-step__description {
+    font-size: 1.8rem!important;
+}
+.wc-block-components-form {
+    input[type="text"], input[type="tel"] {
+        height: 4rem!important;
+    }
+    input[type="checkbox"] {
+        height: 2rem!important;
+        width: 2rem!important;
+    }
+    label {
+        font-size: 1.2rem!important;
+    }
+}
+.wc-block-components-checkbox {
+    label {
+        align-items: center!important;
+    }
+    span {
+        font-size: 1.6rem!important;
+    }
+}
+.wc-block-checkout__terms {
+    span {
+        font-size: 1.6rem!important;
+    }
+}

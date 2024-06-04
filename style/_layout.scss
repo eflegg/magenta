@@ -1,5 +1,41 @@
 
+//Page Transition
+.main-content {
+    animation: fade-in 1s forwards;
+}
 
+.fade-in {
+    opacity: 1;
+}
+
+.main-content.fade-out {
+    animation: fade-out 1s forwards;
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+main {
+    position: relative;
+}
 
 
 

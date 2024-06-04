@@ -21,7 +21,7 @@
 	<!-- <div class="site"> -->
 		<header id="header">
 		<a href="#main"class="skiplink">Skip to content</a>
-			<a class="home-logo" href=<?php echo home_url();?>>
+			<a class="fade home-logo" href=<?php echo home_url();?>>
 			<?php echo get_bloginfo('name'); ?>
 			</a>
 			<nav class="js-navigation"

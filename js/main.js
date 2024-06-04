@@ -1,6 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
 
- 
+ const linkTags = document.querySelectorAll('a');
+ linkTags.forEach(el => {
+  el.classList.add('fade');
+  console.log('fade added');
+})
 
 
 // setTimeout(function(){
@@ -108,7 +112,23 @@ function toggleAccordion(){
 
 accordionItems.forEach(item => item.addEventListener('click', toggleAccordion));
 
+// fade-out
 
+const links = document.querySelectorAll('a.fade');
+const main = document.querySelector('.main-content');
+
+for (let i = 0; i < links.length; i++) {
+    links[i].addEventListener('click', function(event){
+        event.preventDefault();
+        const href = this.getAttribute('href');
+        main.classList.add('fade-out');
+        console.log('added fade-out')
+        setTimeout(() => {
+            window.location.href = href;
+            console.log('changes pages');
+        }, 1000);
+    });
+}
 
 
 //add classes to subnav for easier styling

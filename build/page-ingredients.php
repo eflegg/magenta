@@ -7,7 +7,7 @@ Template Name: Ingredients Page
 get_header(); ?>
 
 <?php while ( have_posts() ) : the_post();?>
-
+<main class="main-content">
 <?php
 $heroBg = 'http://localhost:10038/wp-content/uploads/2024/04/ingredients-page-hero.jpeg';
 ?>

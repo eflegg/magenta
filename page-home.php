@@ -40,8 +40,20 @@ $headshot = 'http://localhost:10038/wp-content/uploads/2024/04/melanie-headshot_
 $inspired = 'http://localhost:10038/wp-content/uploads/2024/04/get-inspired.jpeg';
 ?>
 
+<?php
+$blogLink = home_url('/blog');
+?>
+<?php
+$ingredientsLink = home_url('/ingredients');
+?>
+<?php
+$aboutLink = home_url('/about');
+?>
+<?php
+$shopLink = home_url('/shop');
+?>
 
-
+<main class="main-content">
 
 
 
@@ -61,7 +73,7 @@ $inspired = 'http://localhost:10038/wp-content/uploads/2024/04/get-inspired.jpeg
         <h2 class="headline-sans">Effective, naturally</h2>
         <p>With Magenta, you can feel good about what’s in our bars. Each ingredient is selected to be gentle on your hair, and the planet. 
         </p>
-        <a href="#" class="btn">explore ingredients</a>
+        <a href="<?php echo $ingredientsLink;?>" class="fade btn">explore ingredients</a>
     </div>
     <figure class="aloe">
         <img src="<?php echo $ingredientBg; ?>" alt="up close image of aloe vera">
@@ -77,7 +89,7 @@ $inspired = 'http://localhost:10038/wp-content/uploads/2024/04/get-inspired.jpeg
         <h2 class="headline-sans">Self care reimagined</h2>
         <p class="light-text">Magenta bars reflect the interconnectedness of the physical and the spiritual. They’ll remind you of your true divine nature. Magenta bars are clean, safe and natural shampoo and conditioning bars that not only care for your hair, but nurture your spirit too.
         </p>
-        <a href="#" class="btn btn-light">go to the blog</a>
+        <a href="<?php echo $blogLink;?>" class="btn btn-light">go to the blog</a>
     </div>
     </div>
 </section>
@@ -102,7 +114,7 @@ $inspired = 'http://localhost:10038/wp-content/uploads/2024/04/get-inspired.jpeg
         </p>
         <p class="light-text">Magenta bars began as a search for a solution to my struggles with hair loss, and then became a pathway to help others recover their own luscious manes. From there, Magenta evolved into a way to share a connection to something deeper.
         </p>
-        <a href="#" class="btn btn-light">about Magenta</a>
+        <a href="<?php echo $aboutLink;?>" class="fade btn btn-light">about Magenta</a>
     </div>
     </div>
 </section>
@@ -110,7 +122,7 @@ $inspired = 'http://localhost:10038/wp-content/uploads/2024/04/get-inspired.jpeg
 <section class="section-seven section-container testimonials">
     <div class="testimonial--inner">
         <?php include 'components/cards/testimonial-card.php'; ?>
-        <a href="#" class="btn">see for yourself</a>
+        <a href="<?php echo $shopLink;?>" class="fade btn">see for yourself</a>
     </div>
 
 </section>
@@ -118,10 +130,10 @@ $inspired = 'http://localhost:10038/wp-content/uploads/2024/04/get-inspired.jpeg
 <section style="background-image: url('<?php if(!$inspired): echo $defaultImage;  else: echo $inspired;  endif;  ?>'); background-size: cover; background-position: center;" class="section-container section-eight">
     <div class="content">
         <h3 class="h2 light-text">Get inspired.</h3>
-        <a href="#" class="btn btn-light">shop now</a>
+        <a href="<?php echo $shopLink;?>" class="fade btn btn-light">shop now</a>
     </div>
 </section>
-
+</main>
 <?php			
 	endwhile;
     ?>

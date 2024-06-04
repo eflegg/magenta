@@ -110,7 +110,7 @@ function themename_scripts() {
 	
 	wp_enqueue_script('single-filter', get_template_directory_uri() . '/js/single-filter.js');
 
-	if(is_page_template('page-updates.php') ) {
+	if(is_page_template('page-custom-shop.php') ) {
 		wp_enqueue_script('single-filter', get_template_directory_uri() . '/js/single-filter.js');
 	}
 

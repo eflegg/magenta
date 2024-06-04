@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<main id="main" class="site-main" role="main">
+<main id="main" class="site-main main-content" role="main">
 
  
 
@@ -30,7 +30,7 @@ $term = 'hair-health';
 $archive_link = home_url('/' . $taxonomy . '/' . $term);
 ?>
 
-  <a href="<?php echo $archive_link;?>">See all articles on hair health</a>
+  <a class="fade" href="<?php echo $archive_link;?>">See all articles on hair health</a>
 
     <ul class="card-container">
       <?php
@@ -64,7 +64,7 @@ $archive_link = home_url('/' . $taxonomy . '/' . $term);
 
 ?>
 
-  <a href="<?php echo $archive_link;?>">See all articles on ingredients</a>
+  <a class="fade" href="<?php echo $archive_link;?>">See all articles on ingredients</a>
 
     <ul class="card-container">
       <?php
@@ -98,7 +98,7 @@ $archive_link = home_url('/' . $taxonomy . '/' . $term);
 
 ?>
 
-  <a href="<?php echo $archive_link;?>">See all articles on crystal inspiration</a>
+  <a class="fade" href="<?php echo $archive_link;?>">See all articles on crystal inspiration</a>
 
     <ul class="card-container">
       <?php

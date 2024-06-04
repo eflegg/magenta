@@ -7,7 +7,7 @@ get_header(); ?>
 
 <?php while ( have_posts() ) : the_post();?>
 
-
+<main class="main-content">
 
 <section class="hero reverse align-items-end">
 
@@ -48,10 +48,10 @@ $args =  array(
             <?php endif; ?>
         </div>
         <div class="left ">
-            <a href="<?php the_permalink();?>">
+            <a fade href="<?php the_permalink();?>">
             <h1><?php the_title();?></h1>
             </a>
-            <a href="<?php the_permalink();?>">
+            <a fade href="<?php the_permalink();?>">
             <p><?php the_excerpt();?></p>
             </a>
         </div>
@@ -107,6 +107,7 @@ if( false === wp_script_is( 'single-filter', 'enqueued' ) ){
 
 
 </section>
+</main>
 
 <?php			
 	endwhile;

@@ -23,7 +23,7 @@ $bgImage = 'http://localhost:10038/wp-content/uploads/2024/04/watercolourbg-scal
 
 			<h1>Magenta</h1>
 			<p class="subtitle no-top">Nourish your body and spirit with all-natural shampoo and conditioner bars</p>
-			<a href="#" class="btn">shop now</a>
+			<a href="<?php echo $shopLink;?>" class="btn">shop now</a>
 		</div>
 	</div>
 			

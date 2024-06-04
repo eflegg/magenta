@@ -12,7 +12,7 @@ get_header(); ?>
 $heroBg = 'http://localhost:10038/wp-content/uploads/2024/04/contact-bg.jpg';
 ?>
 
-<main class="contact">
+<main class="contact main-content">
 
 <section style="background-image: url('<?php if(!$heroBg): echo $defaultImage;  else: echo $heroBg;  endif;  ?>'); background-size: cover; background-position: left;" class="section-container contact-hero">
     <h1>Let's Talk</h1>
@@ -20,6 +20,9 @@ $heroBg = 'http://localhost:10038/wp-content/uploads/2024/04/contact-bg.jpg';
     <p class=""><?php echo get_the_excerpt();?></p>
 </section>
 
+<?php
+$blogLink = home_url('/blog');
+?>
 
 <section class="section-container section-three">
     <div class="left">
@@ -27,7 +30,7 @@ $heroBg = 'http://localhost:10038/wp-content/uploads/2024/04/contact-bg.jpg';
         <h3 class="headline-sans">
         Explore the answers to some common questions on the blog
         </h3>
-        <a href="#" class=" btn-arrow">Go to the blog</a>
+        <a href="<?php echo $blogLink;?>" class="fade btn-arrow">Go to the blog</a>
     </article>
     <article>
         <h3 class="headline-sans">

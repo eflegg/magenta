@@ -8,7 +8,7 @@ Template Name: Blog
 
 
 <?php while ( have_posts() ) : the_post();?>
-<main id="main" class="site-main" role="main">
+<main id="main" class="site-main main-content" role="main">
 
  
 
@@ -41,10 +41,10 @@ Template Name: Blog
             <?php endif; ?>
         </div>
         <div class="left ">
-            <a href="<?php the_permalink();?>">
+            <a class="fade" href="<?php the_permalink();?>">
             <h1><?php the_title();?></h1>
             </a>
-            <a href="<?php the_permalink();?>">
+            <a class="fade" href="<?php the_permalink();?>">
             <p><?php the_excerpt();?></p>
             </a>
         </div>
@@ -64,7 +64,7 @@ if( $terms ): ?>
     <?php foreach( $terms as $term ): ?>
         <section class="blog-cat blog-cat__one section-container no-side-pad no-bottom">
             <h2 class="headline-sans"><?php echo esc_html( $term->name ); ?></h2>
-            <a class="cat-archive-link" href="<?php echo esc_url( get_term_link( $term ) ); ?>">See all articles on <?php echo esc_html( $term->name ); ?></a>
+            <a class="cat-archive-link fade" href="<?php echo esc_url( get_term_link( $term ) ); ?>">See all articles on <?php echo esc_html( $term->name ); ?></a>
 
             <ul class="card-container section-container">
             <?php

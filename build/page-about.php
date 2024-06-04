@@ -12,7 +12,7 @@ get_header(); ?>
 $headshot = 'http://localhost:10038/wp-content/uploads/2024/04/melanie-headshot_cropped.jpg';
 ?>
 
-<main class="about--main">
+<main class="about--main main-content">
 
 <figure class="background-crystal">
 <img src="<?php bloginfo('template_url'); ?>/images/svg/background-crystal.svg"  alt="decorative illustration of a crystal" />
