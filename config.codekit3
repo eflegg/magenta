@@ -1045,6 +1045,17 @@
       "sC" : 3,
       "tS" : 0
     },
+    "\/js\/noframework.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/build\/js\/noframework-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
     "\/js\/plugins.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -1283,6 +1294,17 @@
       "mi" : 1,
       "oA" : 0,
       "oAP" : "\/build\/js\/vendor\/waypoints.min-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/js\/waypoint.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/build\/js\/waypoint-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0

@@ -3,39 +3,36 @@ document.addEventListener("DOMContentLoaded", function() {
  const linkTags = document.querySelectorAll('a');
  linkTags.forEach(el => {
   el.classList.add('fade');
-  console.log('fade added');
 })
 
 
-// setTimeout(function(){
-//     $('.home-video').addClass('fading');
-// }, 3300);
+//Vanila waypoints
+const waypoints = document.querySelectorAll('.fade-me');
 
-// setTimeout(function(){
-//     $('.home-video').addClass('hidden');
-// }, 4000);
+const elementIsVisibleInViewport = (el, partiallyVisible = false) => {
+  const { top, left, bottom, right } = el.getBoundingClientRect();
+  const { innerHeight, innerWidth } = window;
+  return partiallyVisible
+    ? ((top > 0 && top < innerHeight) ||
+        (bottom > 0 && bottom < innerHeight)) &&
+        ((left > 0 && left < innerWidth) || (right > 0 && right < innerWidth))
+    : top >= 0 && left >= 0 && bottom <= innerHeight && right <= innerWidth;
+};
 
-// $(".fade-me").waypoint(function(){
-//    $(this[0,'element']).addClass("faded-in");
-// }, {
-//     offset: "80%"
-// });
-
-// $('.menu-toggle').click(function() {
-//     $('body').toggleClass('drawer-open');
-// });
-
-// $('nav .cta').click(function() {
-//     document.querySelector('.cta-block').scrollIntoView({ 
-//       behavior: 'smooth' 
-//     });
-//     return false;
-// });
-
-
+function checkpoints(){
+ waypoints.forEach(waypoint => {
+  const visible = elementIsVisibleInViewport(waypoint);
+  if(visible){
+    waypoint.classList.add('faded-in')
+    console.log('faded in');
+  } else {
+    console.log('not visible');
+  }
+  })
+}
 
 
-
+window.addEventListener("scroll", checkpoints);
 
 
   //better carousel

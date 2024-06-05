@@ -139,7 +139,7 @@ header {
 				
 				}
 			}
-			.main>li:hover>a {
+			.main>li:not(:last-child):hover>a {
 				&:after {
 					transition: all 0.2s ease-in-out;
 					width: 100%;

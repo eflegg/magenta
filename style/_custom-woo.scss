@@ -51,8 +51,8 @@
                 border-radius: 3rem!important;
             }
             &:hover {
-                background: $darkMagenta;
-                color: $lightPeach;
+                background-color: $darkMagenta!important;
+                color: $lightPeach!important;
                 transition: all .25s ease-in-out;
             }
             &.btn-light {
@@ -207,10 +207,10 @@
 //checkout
 
 .wc-block-components-title.wc-block-components-title {
-    font-size: 2.4rem!important;
+    font-size: 2.6rem!important;
 }
 .wc-block-components-checkout-step__description {
-    font-size: 1.8rem!important;
+    font-size: 2rem!important;
 }
 .wc-block-components-form {
     input[type="text"], input[type="tel"] {
@@ -236,4 +236,15 @@
     span {
         font-size: 1.6rem!important;
     }
+}
+.woocommerce div.product p.stock {
+    font-size: 1.8rem;
+    color: $gold;
+    font-weight: 400;
+}
+
+.woocommerce .woocommerce-breadcrumb {
+    font-size: 1.6rem;
+    color: $charcoal;
+    padding-left: 2rem;
 }
