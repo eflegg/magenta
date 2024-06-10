@@ -1,3 +1,6 @@
+
+
+
 .custom-woo-container{
     // border: 2px solid orangered;
     .product {
@@ -115,9 +118,13 @@
             img {
                 object-fit: cover;
                 transform: translateY(5%);
+                width: 90%!important;
+                margin: 0 auto;
+                position: relative;
+               
 				@include media(md){
                     max-height: 75vh;
-					width: 100%;
+					width: 100%!important;
 					margin: 2rem 0;
 					transform: translateY(0);
 					transform: translateX(10%);

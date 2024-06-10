@@ -85,6 +85,8 @@ main {
 
 .section-container__post {
 	p {
+		position: relative;
+		display: block;
 		width: 90%;
 		margin: 2rem auto;
 		@include media(sm){
@@ -95,6 +97,36 @@ main {
 			max-width: 130rem;
 		}
 	
+	}
+
+}
+
+.blog-redirect {
+	
+	margin: 8rem auto;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	width: 90%;
+		@include media(sm){
+			width: 80%;
+		}
+		@include media(md){
+			width: 70%;
+			max-width: 130rem;
+			margin: 12rem auto;
+		}
+
+	p {
+		color: $purple;
+		font-weight: 400;
+		width: 100%;
+	}
+	a {
+		color: $purple;
+		border: 1px solid $purple;
+		display: inline-block;
+		align-self: flex-start;
 	}
 }
 
@@ -128,29 +160,62 @@ main {
 				width: 50%;
 			}
 		}
+		.footer-nav {
+			
+			background: $lightPeach;
+			@include media(md){
+				background: transparent;
+			}
+		}
 		.footer-ul {
+			width: 75%;
 			padding-left: 0;
 			display: flex;
-			flex-direction: column;
+			flex-direction: row;
+			flex-wrap: wrap;
+			@include media(md){
+				flex-direction: column;
+				width: 100%;
+			}
 			justify-content: space-between;
 			li {
+				width: 50%;
+				@include media(md){
+					width: auto;
+				}
 				margin-bottom: 3rem;
 			}
 			a {
-				color: $lightPeach;
+				color: $charcoal;
 				font-size: 2.4rem;
 				@include media(md){
 					font-size: 3.6rem;
+					color: $lightPeach;
 					
 				}
 			}
 		}
-
+.footer-crystal {
+	right: 0;
+	bottom: -50rem;
+	transform: rotate(-25deg)translate(100%, -50%);
+	width: 20rem;
+	@include media(md){
+		display: none;
+		visibility: hidden;
+	}
+}
 		.legal {
-			background-color: $darkMagenta;
+			background-color: $lightPeach;
+			@include media(md){
+				background-color: $darkMagenta;
+			}
 			.legal-inner{
 			p{
-				color:$white;
+				color: $charcoal;
+			@include media(md){
+				color: $white;
+			}
 			}
 			width: 90%;
 			margin: 0 auto;
@@ -158,8 +223,10 @@ main {
 			justify-content: space-between;
 			align-items: center;
 			height: 6.6rem;
-			color: $white;
-			
+			color: $charcoal;
+			@include media(md){
+				color: $white;
+			}
 			}
 		}
 	}

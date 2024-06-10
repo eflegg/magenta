@@ -9,7 +9,7 @@ get_header(); ?>
 
 <main class="main-content">
 
-<section class="hero reverse align-items-end">
+<section class="hero reverse ">
 
 
 <?php
@@ -54,6 +54,7 @@ $args =  array(
             <a fade href="<?php the_permalink();?>">
             <p><?php the_excerpt();?></p>
             </a>
+            <a class="btn"href="<?php the_permalink();?>">see more</a>
         </div>
         <?php endwhile; ?>
         <?php wp_reset_postdata(); ?>
@@ -69,12 +70,14 @@ if( false === wp_script_is( 'single-filter', 'enqueued' ) ){
 
 <section class="section-container">
 
-<?php if( is_active_sidebar( 'shop-page-before-content-widget-area' ) ) : ?>
+
+<!-- registered a custom sidebar if needed -->
+<!-- <?php if( is_active_sidebar( 'shop-page-before-content-widget-area' ) ) : ?>
 	<aside class="shop-page-before-content-widget-area">
         <h2>new widget</h2>
 		<?php dynamic_sidebar( 'shop-page-before-content-widget-area' ); ?>
 	</aside>
-<?php endif; ?>
+<?php endif; ?> -->
 
 <?php 
             $dataType = "product"; 

@@ -47,6 +47,7 @@ Template Name: Blog
             <a class="fade" href="<?php the_permalink();?>">
             <p><?php the_excerpt();?></p>
             </a>
+            <a class="btn"href="<?php the_permalink();?>">keep reading</a>
         </div>
         <?php endwhile; ?>
         <?php wp_reset_postdata(); ?>

@@ -28,6 +28,20 @@ $excerpt = get_the_excerpt();
 				<?php echo the_content(); ?>
 		
           </div>
+		  <div class="blog-redirect">
+			<?php
+			$redirectWanted = get_field('want_to_redirect');
+			if($redirectWanted === true);?>
+			<?php 
+			$blogRedirect = get_field('blog_redirect');
+			$blogLinkDescription = $blogRedirect['blog_link_description'];
+			$blogLink = $blogRedirect['blog_link'];
+			$blogLinkText = $blogRedirect['blog_link_text'];?>
+			<p class="x-large-paragraph text-left"><?php echo $blogLinkDescription;?></p>
+			<a href="<?php echo $blogLink;?>" class="btn"><?php echo $blogLinkText;?></a>
+		
+
+		  </div>
          
 
 </section>

@@ -8,8 +8,8 @@ $bgImage = get_field('footer_image', 'options');
 
 			
 
-		<div class="footer--inner section-container">
-			<div class="newsletter-signup">
+		<div class="footer--inner">
+			<div class="newsletter-signup section-container">
 				<p class="headline-sans h3 light-text">Ready to make the connection?</p>
 				<article>
         			<?php echo do_shortcode('[ninja_form id=2]');?>
@@ -18,8 +18,10 @@ $bgImage = get_field('footer_image', 'options');
 			<figure>
 			<img src="<?php bloginfo('template_url'); ?>/images/svg/peach-crystal.svg"  alt="decorative illustration of a crystal" />
 			</figure>
-			<div class="footer-nav">
-				<nav class="footer-nav"
+			
+			
+			<div class="footer-nav section-container">
+				<nav class="footer-nav--inner"
 					aria-label="Footer Menu">
 					<?php
 					wp_nav_menu( array(
@@ -29,6 +31,9 @@ $bgImage = get_field('footer_image', 'options');
 					?>
 				</nav >
 			</div>
+			<figure class="footer-crystal">
+		<img src="<?php bloginfo('template_url'); ?>/images/svg/crystal-1.svg" alt="decorative illustration of a crystal"/>
+		</figure>
 
 		</div>		
 		<div class="legal">
