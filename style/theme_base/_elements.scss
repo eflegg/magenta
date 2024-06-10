@@ -12,6 +12,7 @@ a, button {
 
 .btn, .single_add_to_cart_button{
 	padding: .5rem 4rem;
+	position: relative;
 	border: 1px solid $darkMagenta;
 	color: $darkMagenta;
 	border-radius: 2.5rem;

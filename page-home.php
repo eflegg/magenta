@@ -73,9 +73,10 @@ $shopLink = home_url('/shop');
 
 
    <?php
-    $sectionTwoImage = get_field('section_two_background_image');
+    $image = get_field('section_two_image');
     $sectionTwoTitle = get_field('section_two_title');
     $sectionTwoText = get_field('section_two_text');
+    $classes = 'aloe';
     ?>
    <section class="section-container section-three">
     <div class="content">
@@ -84,24 +85,25 @@ $shopLink = home_url('/shop');
         </p>
         <a href="<?php echo $ingredientsLink;?>" class="fade btn">explore ingredients</a>
     </div>
-    <figure class="aloe">
+    <?php include 'components/image-regular.php';?>
+    <!-- <figure class="aloe">
         <img src="<?php echo $ingredientBg; ?>" alt="up close image of aloe vera">
-    </figure>
+    </figure> -->
 </section>
 
 
 <?php
-    $sectionfourImage = get_field('section_four_image');
+    $image = get_field('section_four_image');
     $sectionfourTitle = get_field('section_four_title');
     $sectionfourText = get_field('section_four_text');
+    $classes = 'left';
     ?>
 
 <section class=" section-four">
-    <figure class="left">
-    <img src="<?php echo $sectionfourImage; ?>" alt="decorative image of a person floating on their back in the water">
-    </figure>
+<?php include 'components/image-regular.php';?>
+
     <div class="right">
-    <div class="content section-container">
+    <div class="content section-container light-text">
         <h2 class="headline-sans fade-me"><?php echo $sectionfourTitle;?></h2>
         <p class="light-text fade-me"><?php echo $sectionfourText;?>
         </p>
@@ -119,17 +121,21 @@ $shopLink = home_url('/shop');
     </div>
 </section>
 
+<?php
+    $image = get_field('section_five_image');
+    $sectionfiveText = get_field('section_five_text');
+    $classes = 'left';
+    ?>
+
 <section class="section-four reverse section-six">
-    <figure class="left">
-    <img src="<?php echo $headshot; ?>" alt="decorative image of a person floating on their back in the water">
-    </figure>
+    <?php include 'components/image-regular.php';?>
+    <!-- <figure class="left">
+    <img src="<?php echo $sectionfiveImage; ?>" alt="image of Melanie's smiling face">
+    </figure> -->
     <div class="right">
-    <div class="content section-container ">
-        <p class="light-text fade-me">
-        From one heart to another, Magenta bars are daily affirmations, a humble invitation to care for both body and spirit. 
-        </p>
-        <p class="light-text fade-me">Magenta bars began as a search for a solution to my struggles with hair loss, and then became a pathway to help others recover their own luscious manes. From there, Magenta evolved into a way to share a connection to something deeper.
-        </p>
+    <div class="content section-container light-text">
+    <p class="light-text fade-me"><?php echo $sectionfiveText;?>
+   
         <a href="<?php echo $aboutLink;?>" class="fade btn btn-light">about Magenta</a>
     </div>
     </div>

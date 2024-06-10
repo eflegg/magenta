@@ -38,6 +38,13 @@
 //Section 2
 
 .section-two {
+    margin-top: 5rem;
+    @include media(sm){
+        margin-top: 7rem;  
+    }
+    @include media(md){
+        margin-top: 10rem;  
+    }
     .content {
         color: $purple;
         width: 90%;
@@ -143,6 +150,13 @@
 //Section eight
 
 .section-eight {
+    margin-bottom: 8rem;
+    @include media(sm){
+        margin-bottom: 10rem;  
+    }
+    @include media(md){
+        margin-bottom: 15rem;  
+    }
     h3 {
         margin-bottom: 2rem;
         @include media(md){

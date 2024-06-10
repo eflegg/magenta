@@ -50,6 +50,14 @@ form {
 	}
 } 
 
+.contact-form__container {
+	.nf-field-label label {
+		@include bodyText();
+		font-weight: 500;
+		color: $magenta;
+	}
+}
+
 .nf-error.field-wrap .nf-field-element:after {
 	display: none;
 }
