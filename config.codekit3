@@ -1439,7 +1439,7 @@
       "oAP" : "\/build\/screenshot.png",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 0,
+      "opt" : 1,
       "oT" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
@@ -2289,7 +2289,7 @@
     "displayValueWasSetByUser" : 0,
     "iconImageName" : "brackets_purple",
     "iconImageWasSetByUser" : 0,
-    "lastBuiltDate" : 727209162.19182706
+    "lastBuiltDate" : 739750379.61274397
   },
   "projectSettings" : {
     "abortBuildOnError" : 1,

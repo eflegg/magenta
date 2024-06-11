@@ -15,6 +15,10 @@ $bgImage = get_field('footer_image', 'options');
         			<?php echo do_shortcode('[ninja_form id=2]');?>
     			</article>
 			</div>
+			<?php
+			$image = get_field('footer_crystal_desktop', 'option');
+			$classes = '';?>
+			<?php include 'components/image-regular.php';?>
 			<figure>
 			<img src="<?php bloginfo('template_url'); ?>/images/svg/peach-crystal.svg"  alt="decorative illustration of a crystal" />
 			</figure>
@@ -31,9 +35,12 @@ $bgImage = get_field('footer_image', 'options');
 					?>
 				</nav >
 			</div>
-			<figure class="footer-crystal">
-		<img src="<?php bloginfo('template_url'); ?>/images/svg/crystal-1.svg" alt="decorative illustration of a crystal"/>
-		</figure>
+
+			<?php
+			$image = get_field('footer_crystal_mobile', 'option');
+			$classes = 'footer-crystal';?>
+			<?php include 'components/image-regular.php';?>
+	
 
 		</div>		
 		<div class="legal">

@@ -17,9 +17,15 @@ $heroText = get_field('hero_text');
 <section style="background-image: url('<?php if(!$bgImage): echo $defaultImage;  else: echo $bgImage;  endif;  ?>'); background-size: cover; box-shadow: inset 0 0 0 1000px rgba(0,0,0,.<?php echo $opacity;?>);" class="home-hero">
  		
 	<div class="hero-content">
-		<figure class="hero-crystal">
+		<?php 
+		$image = get_field('home_hero_crystal', 'option');
+		$classes = 'hero-crystal';?>
+		<?php include 'image-regular.php';?>
+
+
+		<!-- <figure class="hero-crystal">
 		<img src="<?php bloginfo('template_url'); ?>/images/svg/crystal-1.svg" alt="decorative illustration of a crystal"/>
-		</figure>
+		</figure> -->
 		<div class="hero-text">
 
 			<h1>Magenta</h1>

@@ -115,9 +115,11 @@ $shopLink = home_url('/shop');
 <section class="section-five section-container">
     <div class="content">
         <h2 class="dark-text fade-me"><?php echo the_field('home_affirmation');?></h2>
-        <figure>
-        <img src="<?php echo $crystal; ?>" alt="decorative illustration of a crystal">
-        </figure>
+        <?php
+        $image = get_field('home_affirmation_crystal', 'option');
+        $classes = '';?>
+        <?php include 'components/image-regular.php';?>
+  
     </div>
 </section>
 

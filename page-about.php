@@ -15,10 +15,12 @@ $headshot = 'http://localhost:10038/wp-content/uploads/2024/04/melanie-headshot_
 <main class="about--main main-content">
 
 
+<?php
+			$image = get_field('about_crystal', 'option');
+			$classes = 'background-crystal';?>
+			<?php include 'components/image-regular.php';?>
 
-<figure class="background-crystal">
-<img src="<?php bloginfo('template_url'); ?>/images/svg/background-crystal.svg"  alt="decorative illustration of a crystal" />
-</figure>
+
 
 <?php 
 $aboutHeadline = get_field('about_headline');

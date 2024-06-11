@@ -47,9 +47,13 @@ $blogLink = home_url('/blog');
     </article>
     </div>
     <div class="right">
-        <figure>
-        <img src="<?php bloginfo('template_url'); ?>/images/svg/contact-crystal.svg" />
-        </figure>
+
+    <?php
+			$image = get_field('contact_crystal', 'option');
+			$classes = '';?>
+			<?php include 'components/image-regular.php';?>
+
+     
     </div>
 </section>
 
