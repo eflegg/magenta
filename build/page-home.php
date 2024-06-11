@@ -32,10 +32,7 @@ $crystal = 'http://localhost:10038/wp-content/uploads/2024/04/crystal-2.svg';
 $headshot = 'http://localhost:10038/wp-content/uploads/2024/04/melanie-headshot_cropped.jpg';
 ?>
 
-<?php
-//get field
-$inspired = 'http://localhost:10038/wp-content/uploads/2024/04/get-inspired.jpeg';
-?>
+
 
 <?php
 $blogLink = home_url('/blog');
@@ -151,7 +148,15 @@ $shopLink = home_url('/shop');
 
 </section>
 
+<?php
+$inspired = get_field('get_inspired_image');
+?>
+
 <section style="background-image: url('<?php if(!$inspired): echo $defaultImage;  else: echo $inspired;  endif;  ?>'); background-size: cover; background-position: center;" class="section-container section-eight">
+
+
+
+
     <div class="content">
         <h3 class="h2 light-text fade-me">Get inspired.</h3>
         <a href="<?php echo $shopLink;?>" class="fade btn btn-light">shop now</a>
