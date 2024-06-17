@@ -7,7 +7,7 @@ if($darken =='Yes'):
 else: $opacity = 0;
 endif;
 
-$defaultImage = 'http://localhost:10038/wp-content/uploads/2024/04/watercolourbg-scaled.jpg';
+
 
 $bgImage = get_field('hero_background');
 $heroText = get_field('hero_text');
@@ -23,9 +23,7 @@ $heroText = get_field('hero_text');
 		<?php include 'image-regular.php';?>
 
 
-		<!-- <figure class="hero-crystal">
-		<img src="<?php bloginfo('template_url'); ?>/images/svg/crystal-1.svg" alt="decorative illustration of a crystal"/>
-		</figure> -->
+
 		<div class="hero-text">
 
 			<h1>Magenta</h1>
@@ -35,15 +33,6 @@ $heroText = get_field('hero_text');
 	</div>
 			
  		
-		
-
-
-			
-						<!-- <img src="<?php bloginfo('template_url'); ?>/images/images/watercolourbg.jpg" /> -->
-				
-		
-
-
  		</section>
 
 

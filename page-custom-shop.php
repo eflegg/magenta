@@ -26,7 +26,6 @@ $args =  array(
     'post_status'         => 'publish',
     'ignore_sticky_posts' => 1,
     'posts_per_page'      => 1,
-    'orderby'             => $orderby,
     'order'               => $order == 'asc' ? 'asc' : 'desc',
     'tax_query'           => $tax_query 
  );

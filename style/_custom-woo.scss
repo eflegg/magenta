@@ -37,7 +37,7 @@
             display: none;
             visibility: hidden;
         }
-        .single_add_to_cart_button {
+        .single_add_to_cart_button, .wc-forward {
             background-color: transparent!important;
             padding: .5rem 4rem;
             border: 1px solid $darkMagenta;
@@ -254,4 +254,125 @@
     font-size: 1.6rem;
     color: $charcoal;
     padding-left: 2rem;
+}
+
+//notifications
+
+.woocommerce-message {
+    border-top-color: $purple;
+}
+
+.woocommerce-error, .woocommerce-info, .woocommerce-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include media(md){
+flex-direction: row;
+    }
+    align-items: center;
+    padding: 3rem;
+    @include heading();
+    font-size: 2.4rem;
+    text-align: center;
+    margin: 5rem;
+    position: relative;
+    background-color: $lightPeach;
+    color: #515151;
+    border: 1px solid $darkMagenta;
+    border-radius: 1rem;
+    list-style: none outside;
+    width: auto;
+    word-wrap: break-word;
+    &:before {
+        content: "";
+        color: transparent;
+    }
+}
+
+
+.button {
+    &.wc-forward {
+        margin-bottom: 3rem!important;
+        @include media(md){
+            margin-bottom: 0!important;
+        }
+        background-color: transparent!important;
+        padding: .5rem 4rem;
+        border: 1px solid $darkMagenta!important;
+        @include bodyText();
+        text-transform: lowercase;
+        color: $darkMagenta!important;
+        @include bodyText();
+        font-weight: 300!important;
+        border-radius: 2.5rem;
+        background: transparent;
+        cursor: pointer;
+        font-size: 2.4rem;
+        transition: all .25s ease-in-out;
+        @include media(md){
+            padding: 1rem 4rem;
+            border-radius: 3rem!important;
+        }
+        &:hover {
+            background-color: $darkMagenta!important;
+            color: $lightPeach!important;
+            transition: all .25s ease-in-out;
+        }
+        &.btn-light {
+            border: 1px solid $lightPeach;
+            color: $lightPeach;
+            &:hover {
+                background: $lightPeach;
+                color: $darkMagenta;
+                transition: all .25s ease-in-out;
+            }
+        }
+    }
+}
+
+
+.wc-block-components-textarea {
+    font-size: 1.8rem!important;
+}
+
+//confirmation message
+
+.woocommerce-order-overview {
+    &.woocommerce-thankyou-order-details {
+        &.order_details {
+            @include bodyText();
+            font-size: 1.8rem;
+
+        }
+    }
+}
+
+.woocommerce {
+
+    table.shop_table{
+        margin-top: 5rem;
+        margin-bottom: 5rem!important;
+        border: 1px solid $magenta;
+        font-size: 1.8rem;
+        th {
+            font-weight: 400!important;
+            @include heading();
+        }
+        bdi, td {
+            @include bodyText();
+            font-weight: 400!important;
+        }
+    }
+}
+.woocommerce .woocommerce-customer-details address {
+    border: 1px solid $magenta;
+    margin-top: 3rem;
+    @include bodyText();
+    font-size: 1.8rem;
+}
+.woocommerce-thankyou-order-received{
+    font-size: 2.4rem;
+    @include heading();
+    margin-bottom: 3rem!important;
 }
