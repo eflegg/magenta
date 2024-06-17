@@ -3,7 +3,7 @@
 
 
 
-<div class="ajax-filters filter-by-category <?php echo $filterClass;?>">
+<div class="ajax-filters filter-by-category <?php if($filterClass): echo $filterClass; else: echo ""; endif ;?>">
 	<form class="category-form" id="ajax-filter">
 
 
