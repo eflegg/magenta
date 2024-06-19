@@ -47,15 +47,12 @@
     }
     .content {
         color: $purple;
-        width: 90%;
+       
+        padding-right: 10%;
         @include media(xs){
-            width: 66%;
+           padding-right: 40%;
         }
-        @include media(sm){
-            width: 66%;
-        }
-      
-        p{
+        p {
             font-size: 2rem;
             @include media(md){
                 font-size: 3.2rem;
@@ -103,6 +100,9 @@
     @include media(md){
         justify-content: space-between;
         flex-direction: row;
+        .right, figure {
+            width: 50%;
+        }
         &.reverse {
             flex-direction: row-reverse;
       
@@ -111,12 +111,14 @@
     .left {
        img {
         object-position: right;
+       
        }
     }
     .right {
         padding-top: 5rem;
         padding-bottom: 5rem;
         color: $lightPeach;
+       
     }
 }
 
@@ -132,6 +134,20 @@
             margin: 0 auto;
         }
     }
+}
+
+.section-six {
+   background: $purple;
+   @include media(md){
+    height: 100vh;
+    align-items: center;
+    .right, figure {
+        width: 50%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+   }
 }
 
 //Testimonial Section 7

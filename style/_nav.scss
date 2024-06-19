@@ -1,5 +1,19 @@
 
-
+.main-header {
+	background: $lightPeach;
+	position: sticky;
+	z-index: 10;
+	&.scroll-up {
+		position: sticky;
+		top: 0;
+		transition: all .25s ease-out;
+	}
+	&.scroll-down {
+		position: sticky;
+		top: 0;
+		transition: all .25s ease-in;
+	}
+}
 .skiplink{
 		position: absolute;
 		background-color: $magenta;
@@ -8,36 +22,46 @@
 		font-weight: 500;
 		border-radius: 72px;
 		left: 0;
-		top: 5rem;
+		top: 15rem;
 		padding: 20px;
 		font-size: 1.6rem;
-		transform: translateX(-200%);
+		transform: translateX(-500%);
+		transition: all .25s ease-out;
 		&:focus {
 			transform: translateX(0%);
+			transition: all .25s ease-out;
 		}
 	}
+
 header {
-	// border: 3px solid orangered;
+	width: 100%;
+	background: $lightPeach;
+	
+}
+.header--inner {
+	border: 3px solid orangered;
 	position: relative;
 	z-index: 20;
-	//using js to change positioning when open. get rid of it
-	width: 85%;
-	margin: 5% auto;
+	margin: 0 auto;
 	display: block;
 	@include media(sm){
 		display: flex;
 		justify-content: flex-start;
 	}
+	padding-top: 5%!important;
+	padding-bottom: 5%!important;
 	@include media(md){
-		margin: 2% auto;
+		padding-top: 2%!important;
+		padding-bottom: 2%!important;
 	}
+
 	@include media(lg){
 		justify-content: space-between;
 		align-items: center;
 	}
-	@include media(xl){
-		padding: 1rem 5rem 0 5rem;
-	}
+	// @include media(xl){
+	// 	padding: 1rem 5rem 0 5rem;
+	// }
 
 	
 	nav {

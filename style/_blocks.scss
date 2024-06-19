@@ -50,11 +50,12 @@
         }
     }
 	&.reverse {
+		border: 2px solid seagreen;
 		flex-direction: column;
 		@include media(lg){
 			flex-direction: row;
 			align-items: flex-end;
-		
+		justify-content: center;
 		
 		}
 		margin-bottom: 5rem;
@@ -62,11 +63,11 @@
 			height: 90%;
 		}
 		.right {
-			
+			border: 2px solid red;
 			background: $darkPeach;
 			@include media(lg){
-				width: 45%;
-		height: 90%
+				width: 50%;
+				height: 85%
 
 			}
 			img {
@@ -79,14 +80,55 @@
 			}
 		}
 		.left {
-			padding: 6.25rem 2rem 0 2rem;
-			@include media(sm){
-				padding: 6.25rem 3rem 0 3rem;
-			}
-			@include media(lg){
-				width: 45%;
-			}
+			border: 2px solid blue;
+			// padding: 3.25rem 2rem;
+			width: 50%;
+			// max-width: 54rem;
+			text-align: right;
+			
+			
 		}
+	}
+}
+
+.feature-prod--inner{
+
+	display: flex;
+	height: 80vh;
+	min-height: 63rem;
+    width: 100%;
+    display: flex;
+	@include media(md){
+		flex-direction: row;
+		align-items: flex-end;
+		height: 80vh;
+		min-height: 63rem;
+	}
+	.left {
+		border: 2px solid springgreen;
+		@include media(md){
+			width: 50%;
+		max-width: 67rem;
+
+		}
+	}
+	.right {
+		border: 2px solid slateblue;
+	padding: 2rem 0;
+			background: $darkPeach;
+			@include media(md){
+				width: 50%;
+				height: 90%
+
+			}
+			img {
+				@include media(md){
+					width: 100%;
+					// margin: 2rem 0;
+					transform: translateY(0);
+					transform: translateX(10%);
+				}
+			}
 	}
 }
 
@@ -114,16 +156,23 @@
 
 
 .card-container {
-	display:flex;
+	border: 2px solid goldenrod;
+	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	
+	padding-left: 0rem;
 	margin-top: 5rem;
 	.blog-card--container {
+		figure {
+			width: 100%;
+			aspect-ratio: 1/1
+	
+		}
 		margin-bottom: 3rem;
 		width: 100%;
 		@include media(md){
 		width: 47%;	
-	
+		height: auto;
 		}
 		@include media(lg){
 			width: 30%;	
@@ -142,11 +191,7 @@
 				font-size: 1.6rem;
 			}
 		}
-		figure {
-			width: 100%;
-			aspect-ratio: 1/1
-
-		}
+		
 	}
 }
 

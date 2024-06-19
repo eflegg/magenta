@@ -7,6 +7,9 @@ img {
 a, button {
 	cursor: pointer!important;
 }
+figure {
+	height: 100%;
+}
 
 //Buttons 
 
@@ -14,6 +17,7 @@ a, button {
 	padding: .5rem 4rem;
 	position: relative;
 	border: 1px solid $darkMagenta;
+	display: inline-block;
 	color: $darkMagenta;
 	border-radius: 2.5rem;
 	background: transparent;

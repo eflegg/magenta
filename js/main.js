@@ -6,6 +6,44 @@ document.addEventListener("DOMContentLoaded", function() {
 })
 
 
+//nav scroll
+/* Code can be found in repo: https://github.com/robole/artifice
+*/
+
+let logo = document.querySelector(".main-header");
+let previousScrollPosition = 0;
+
+const isScrollingDown = () => {
+  let goingDown = false;
+  let scrollPosition = window.scrollY;
+
+  if (scrollPosition > previousScrollPosition) {
+    goingDown = true;
+  }
+
+  previousScrollPosition = scrollPosition;
+
+  return goingDown;
+};
+
+const handleScroll = () => {
+  if (isScrollingDown()) {
+    const headerHeight = logo.offsetHeight;
+    console.log(headerHeight);
+    logo.classList.add("scroll-down");
+    logo.style.top = "-111px";
+    logo.classList.remove("scroll-up");
+  } else {
+    logo.classList.add("scroll-up");
+    logo.classList.remove("scroll-down");
+      logo.style.top = "0"
+  }
+};
+
+const scrollThrottle = _.throttle(handleScroll, 100);
+window.addEventListener("scroll", scrollThrottle);
+
+
 //Vanila waypoints
 const waypoints = document.querySelectorAll('.fade-me');
 
@@ -24,9 +62,9 @@ function checkpoints(){
   const visible = elementIsVisibleInViewport(waypoint);
   if(visible){
     waypoint.classList.add('faded-in')
-    console.log('faded in');
+    // console.log('faded in');
   } else {
-    console.log('not visible');
+    // console.log('not visible');
   }
   })
 }

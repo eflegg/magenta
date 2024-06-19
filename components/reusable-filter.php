@@ -1,9 +1,10 @@
 
 
 
+<?php 
+$filterClass = "";?>
 
-
-<div class="ajax-filters filter-by-category <?php if($filterClass): echo $filterClass; else: echo ""; endif ;?>">
+<div class="ajax-filters filter-by-category <?php if($filterClass): echo $filterClass; else: null; endif ;?>">
 	<form class="category-form" id="ajax-filter">
 
 

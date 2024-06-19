@@ -60,8 +60,8 @@ $shopLink = home_url('/shop');
     $sectionOneTitle = get_field('section_one_title');
     $sectionOneText = get_field('section_one_text');
     ?>
-   <section style="background-image: url('<?php if(!$embraceBg): echo $defaultImage;  else: echo $embraceBg;  endif;  ?>'); background-size: cover; background-position: center;" class="section-container section-two">
-    <div class="content">
+   <section style="background-image: url('<?php if(!$embraceBg): echo $defaultImage;  else: echo $embraceBg;  endif;  ?>'); background-size: cover; background-position: center;" class=" section-two">
+    <div class="content section-container">
         <h2 class="headline-sans fade-me"><?php echo $sectionOneTitle;?></h2>
         <p class="fade-me"><?php echo $sectionOneText;?>
         </p>
@@ -126,17 +126,15 @@ $shopLink = home_url('/shop');
     $classes = 'left';
     ?>
 
-<section class="section-four reverse section-six">
-    <?php include 'components/image-regular.php';?>
-    <!-- <figure class="left">
-    <img src="<?php echo $sectionfiveImage; ?>" alt="image of Melanie's smiling face">
-    </figure> -->
-    <div class="right">
-    <div class="content section-container light-text">
-    <p class="light-text fade-me"><?php echo $sectionfiveText;?>
-   
-        <a href="<?php echo $aboutLink;?>" class="fade btn btn-light">about Magenta</a>
-    </div>
+<section class=" section-six">
+    <div class=" section-four reverse section-six--inner">
+        <?php include 'components/image-regular.php';?>
+        <div class="right section-container half">
+            <div class="content light-text">
+                <p class="light-text fade-me"><?php echo $sectionfiveText;?></p>
+                <a href="<?php echo $aboutLink;?>" class="fade btn btn-light">about Magenta</a>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -152,12 +150,12 @@ $shopLink = home_url('/shop');
 $inspired = get_field('get_inspired_image');
 ?>
 
-<section style="background-image: url('<?php if(!$inspired): echo $defaultImage;  else: echo $inspired;  endif;  ?>'); background-size: cover; background-position: center;" class="section-container section-eight">
+<section style="background-image: url('<?php if(!$inspired): echo $defaultImage;  else: echo $inspired;  endif;  ?>'); background-size: cover; background-position: center;" class=" section-eight">
 
 
 
 
-    <div class="content">
+    <div class="content section-container">
         <h3 class="h2 light-text fade-me">Get inspired.</h3>
         <a href="<?php echo $shopLink;?>" class="fade btn btn-light">shop now</a>
     </div>

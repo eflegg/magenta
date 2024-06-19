@@ -44,7 +44,10 @@ main {
 .section-container {
 	margin: 0 auto;
 	max-width: 140rem;
-	
+
+	&.half {
+		max-width: 56rem;
+	}
 	position: relative;
 	padding: 3.25rem 2rem;
 	@include media(sm){
@@ -54,7 +57,19 @@ main {
 		padding: 8.25rem 6rem;
 	}
 	@include media(lg){
-		padding: 12.5rem 8.25rem
+		padding: 12.5rem 8.25rem;
+	}
+	&.right-only {
+		padding: 3.25rem 2rem 0 0;
+		@include media(sm){
+			padding: 7rem 3rem 0 0;
+		}
+		@include media(md){
+			padding: 8.25rem 6rem 0 0;
+		}
+		@include media(lg){
+			padding: 12.5rem 8.25rem 0 0;
+		}
 	}
 	&.no-side-pad {
 		padding: 3.25rem 0;
