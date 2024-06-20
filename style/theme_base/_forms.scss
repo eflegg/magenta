@@ -6,21 +6,26 @@
 	display: none;
 }
 .nf-form-title {
-	display:none;
+	display: none;
 }
 
 form {
 	margin-top: 3rem;
 	.nf-before-form-content {
-		display:none;
+		display: none;
 	}
-	
+	 
 	.nf-field-label label {
 		@include bodyText();
 		font-weight: 500;
 		color: $lightPeach;
 	}
-	
+	input {
+		height: 4rem;
+	}
+	.nf-form-content .list-select-wrap .nf-field-element>div, .nf-form-content input:not([type=button]), .nf-form-content textarea  {
+		height: 4rem;
+	}
 	input, textarea {
 		border-radius: 0 !important;
 		background-color: transparent;

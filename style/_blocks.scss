@@ -94,18 +94,17 @@
 .feature-prod--inner{
 
 	display: flex;
-	height: 80vh;
-	min-height: 63rem;
+	flex-direction: column;
     width: 100%;
     display: flex;
 	@include media(md){
 		flex-direction: row;
 		align-items: flex-end;
 		height: 80vh;
-		min-height: 63rem;
+		min-height: 50rem;
 	}
 	.left {
-		border: 2px solid springgreen;
+
 		@include media(md){
 			width: 50%;
 		max-width: 67rem;
@@ -113,12 +112,12 @@
 		}
 	}
 	.right {
-		border: 2px solid slateblue;
+	
 	padding: 2rem 0;
 			background: $darkPeach;
 			@include media(md){
 				width: 50%;
-				height: 90%
+				height: 100%
 
 			}
 			img {
@@ -156,7 +155,7 @@
 
 
 .card-container {
-	border: 2px solid goldenrod;
+	
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;

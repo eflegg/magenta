@@ -9,9 +9,8 @@ get_header(); ?>
 
 <main class="main-content">
 
-<section >
+<section>
     <div class="feature-prod--inner">
-
 
     <?php
     $tax_query[] = array(

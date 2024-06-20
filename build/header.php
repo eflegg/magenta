@@ -39,7 +39,7 @@
 	<!-- </div> -->
 			<div class="js-hamburger-menu">
 				<button 
-				class="button btn-nav  button--red js-menu-button menu-toggle" 
+				class=" btn-nav  button--red js-menu-button menu-toggle" 
 					aria-expanded="false"
 					aria-label="Menu"
 					>

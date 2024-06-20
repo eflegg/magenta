@@ -8,6 +8,8 @@
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
+            height: 80vh;
+            min-height: 50rem;
         }
     }
     .summary {
@@ -389,6 +391,9 @@ body:not(.woocommerce-block-theme-has-button-styles) .wc-block-components-button
     }
 }
 
+.onsale {
+    display: none;
+}
 .woocommerce {
 
     table.shop_table{

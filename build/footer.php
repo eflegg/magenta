@@ -10,18 +10,18 @@ $bgImage = get_field('footer_image', 'options');
 
 		<div class="footer--inner">
 			<div class="newsletter-signup section-container">
-				<p class="headline-sans h3 light-text">Ready to make the connection?</p>
+				<p class="headline-sans h4 light-text">Ready to make the connection?</p>
 				<article>
         			<?php echo do_shortcode('[ninja_form id=2]');?>
     			</article>
 			</div>
 			<?php
 			$image = get_field('footer_crystal_desktop', 'option');
-			$classes = '';?>
+			$classes = 'footer-crystal__desktop';?>
 			<?php include 'components/image-regular.php';?>
-			<figure>
+			<!-- <figure>
 			<img src="<?php bloginfo('template_url'); ?>/images/svg/peach-crystal.svg"  alt="decorative illustration of a crystal" />
-			</figure>
+			</figure> -->
 			
 			
 			<div class="footer-nav section-container">
@@ -38,7 +38,7 @@ $bgImage = get_field('footer_image', 'options');
 
 			<?php
 			$image = get_field('footer_crystal_mobile', 'option');
-			$classes = 'footer-crystal';?>
+			$classes = 'footer-crystal__mobile';?>
 			<?php include 'components/image-regular.php';?>
 	
 

@@ -165,10 +165,13 @@ main {
 		
 		}
 		figure {
-			position: absolute;
-			bottom: -7rem;
-			left: 50%;
-			transform: translateX(-40%);
+			
+			height: auto;
+			// border: 2px solid orangered;
+			// img {
+			// 	border: 2px solid yellow;
+			// }
+			
 		}
 		.newsletter-signup {
 			@include media(md){
@@ -204,17 +207,40 @@ main {
 				color: $charcoal;
 				font-size: 2.4rem;
 				@include media(md){
-					font-size: 3.6rem;
+					font-size: 3rem;
 					color: $lightPeach;
 					
 				}
 			}
 		}
-.footer-crystal {
-	right: 0;
-	bottom: -50rem;
-	transform: rotate(-25deg)translate(100%, -50%);
-	width: 20rem;
+		.footer-crystal__desktop {
+		
+			display: none;
+			visibility: hidden;
+			position: absolute;
+			bottom: -7rem;
+			left: 50%;
+			transform: translateX(-40%);
+			@include media(md){
+				display: inline-block;
+				visibility: visible;
+				img {
+					height: 75%;
+				}
+			}
+		}
+.footer-crystal__mobile {
+	position: absolute;
+	right: 10rem;
+	
+	bottom: 0;
+	// transform: rotate(-25deg)translate(100%, -50%);
+	transform: rotate(-25deg)translateY(50%);
+	width: 14rem;
+	img {
+		width: 100%;
+		height: 100%;
+	}
 	@include media(md){
 		display: none;
 		visibility: hidden;

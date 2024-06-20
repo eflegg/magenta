@@ -39,7 +39,7 @@ header {
 	
 }
 .header--inner {
-	border: 3px solid orangered;
+
 	position: relative;
 	z-index: 20;
 	margin: 0 auto;
@@ -335,13 +335,13 @@ header {
 	}
 	//from scratch hamburger menu
 .btn-nav {
-   border: 0px;
+   border: 0px!important;
 	position: absolute!important;
 	width: 8rem;
 	height: 5rem;
 	z-index: 50;
-	right: 0rem;
-	top: -1rem;
+	right: 5rem;
+	top: 1rem;
 	display: flex!important;
 	flex-direction: column;
 	justify-content: center;
