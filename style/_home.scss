@@ -87,6 +87,9 @@
 //Section 4
 
 .section-four {
+    figure {
+        height: auto;
+    }
     background-color: $darkMagenta;
     display: flex;
     flex-direction: column-reverse;
@@ -125,6 +128,9 @@
 //Section 5
 
 .section-five {
+    figure {
+        height: auto;
+    }
     .content {
         text-align: center;
         margin: 0 auto;
