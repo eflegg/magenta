@@ -79,7 +79,7 @@ get_header(); ?>
             ?>
         <?php include 'components/reusable-filter.php';?>
 
-<ul class="card-container ">
+<ul class="card-container products">
         
 <?php
    
