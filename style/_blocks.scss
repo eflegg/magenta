@@ -121,6 +121,11 @@
 
 			}
 			img {
+				object-fit: cover;
+				transform: translateY(5%);
+				width: 90% !important;
+				margin: 0 auto;
+				position: relative;
 				@include media(md){
 					width: 100%;
 					// margin: 2rem 0;

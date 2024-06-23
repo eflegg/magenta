@@ -128,21 +128,21 @@ get_header( 'shop' ); ?>
 							<li aria-expanded="false" class="accordion-item">
 							<button  class="item--inner display-flex justify-space-between">
 									<p>Product Details</p>
-									<figure class="icon">icon</figure>
+									<figure class="icon"><img src="<?php bloginfo('template_url'); ?>/images/chevron.png" alt="chevron icon"></figure>
 								</button>
 								<p class="answer"><?php echo $productDetails;?></p>
 							</li>
 							<li aria-expanded="false" class="accordion-item">
 								<button class="item--inner display-flex justify-space-between">
 									<p>What's not in Magenta bars</p>
-									<figure class="icon">icon</figure>
+									<figure class="icon"><img src="<?php bloginfo('template_url'); ?>/images/chevron.png" alt="chevron icon"></figure>
 								</button>
 								<p class="answer"><?php echo $whatsNot;?></p>
 							</li>
 							<li aria-expanded="false" class="accordion-item">
 							<button class="item--inner display-flex justify-space-between">
 									<p>How to use</p>
-									<figure class="icon">icon</figure>
+									<figure class="icon"><img src="<?php bloginfo('template_url'); ?>/images/chevron.png" alt="chevron icon"></figure>
 								</button>
 								<p class="answer"><?php echo $howToUse;?></p>
 							</li>

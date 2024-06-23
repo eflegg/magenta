@@ -19,7 +19,7 @@
     flex-direction: column;
     align-items: center;
     figure {
-        height: 21.5rem;
+        // height: 21.5rem;
         @include media(sm){
             height: 30rem;
         }
