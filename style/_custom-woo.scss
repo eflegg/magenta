@@ -93,10 +93,10 @@
         // display: none;
         // visibility: hidden;
     }
-    .woocommerce-tabs {
-        border: 2px solid goldenrod;
+    // .woocommerce-tabs {
+    //     border: 2px solid goldenrod;
       
-    }
+    // }
     .woocommerce-product-gallery {
         // border: 3px solid blue;
         @include media(md){
@@ -153,25 +153,29 @@
     .accordion {
         
         .accordion-list {
-            background: white;
+           
             padding-left: 0;
             .accordion-item {
                 cursor: pointer;
                 &[aria-expanded="false"]{
                     overflow: hidden;
                     .answer{
-                        padding: 3rem;
-                        position: absolute;
                         visibility: hidden;
+                        padding: 3rem;
                         opacity: 0;
+                        position: absolute;
+                        display: inline-table;
+                        max-width: 100%;
+                        width: 84.5%;
                         overflow: hidden;
-                        transition: all .25s ease-in-out;
-                        height: 0%;
+                        transition: all .25s;
+                        max-height: 0rem;
                     }
                 }
                 .icon {
                     transform: rotate(0deg);
                     transition: all .25s ease-in-out;
+                    width: 5.5rem;
                 }
                 &[aria-expanded="true"]{
                     overflow: visible;
@@ -180,12 +184,14 @@
                         transition: all .25s ease-in-out;
                     }
                     .answer{
+                       
+                        width: 100%;
+                        padding: 3rem;
                         position: relative;
                         opacity: 1;
                         visibility: visible;
                         overflow: visible;
-                        height: 100%;
-                        transition: all .25s ease-in-out;
+                        transition: all .25s ;
                     }
                 }
             }
@@ -194,6 +200,7 @@
                 padding: 3rem;
                 border: 1px solid $charcoal;
                 margin: 0;
+                background-color: transparent;
             }
             .item--inner[aria-expanded="false"]{
                 overflow: hidden;
@@ -203,13 +210,7 @@
                 overflow: hidden;
               
             }
-           .answer {
-           
-            &.open {
-             
-           
-            }
-           }
+        
         }
 
 
