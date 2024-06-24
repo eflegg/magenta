@@ -351,9 +351,11 @@ function toggleAccordion(){
   if(this.ariaExpanded === "false"){
     remove();
     this.setAttribute('aria-expanded', 'true');
+
   } else {
     remove();
     this.setAttribute('aria-expanded', 'false');
+
   }
  
 }
