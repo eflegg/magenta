@@ -130,7 +130,7 @@ get_header( 'shop' ); ?>
 									<p>Product Details</p>
 									<figure class="icon"><img src="<?php bloginfo('template_url'); ?>/images/chevron.png" alt="chevron icon"></figure>
 								</button>
-								<p class="answer"><?php echo $productDetails;?></p>
+								<div class="p answer"><?php echo $productDetails;?></div>
 							</li>
 							<li aria-expanded="false" class="accordion-item">
 								<button class="item--inner display-flex justify-space-between">

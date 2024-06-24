@@ -157,19 +157,22 @@
             padding-left: 0;
             .accordion-item {
                 cursor: pointer;
+                transition: all .25s ease-in-out;
                 &[aria-expanded="false"]{
                     overflow: hidden;
+                    height: 12.8rem;
+                    transition: all .25s ease-in-out;
                     .answer{
                         visibility: hidden;
-                        padding: 3rem;
+                        padding: 0rem;
                         opacity: 0;
-                        position: absolute;
+                        position: relative;
                         display: inline-table;
                         max-width: 100%;
-                        width: 84.5%;
+                        width: 100%;
                         overflow: hidden;
                         transition: all .25s;
-                        max-height: 0rem;
+                        height: 0rem;
                     }
                 }
                 .icon {
@@ -178,13 +181,14 @@
                     width: 5.5rem;
                 }
                 &[aria-expanded="true"]{
+                    transition: all .25s ease-in-out;
                     overflow: visible;
                     .icon {
                         transform: rotate(180deg);
                         transition: all .25s ease-in-out;
                     }
                     .answer{
-                       
+                       height: 100%;
                         width: 100%;
                         padding: 3rem;
                         position: relative;
@@ -196,6 +200,7 @@
                 }
             }
             .item--inner, .answer {
+                border: 1px solid blue;
                 width: 100%;
                 padding: 3rem;
                 border: 1px solid $charcoal;
