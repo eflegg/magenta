@@ -59,6 +59,7 @@ $bgImage = get_field('footer_image', 'options');
 
 
 	<?php wp_footer(); ?>
+					</main>  <!-- opened in header -->
     </body>
 </html>
 

@@ -12,7 +12,7 @@ get_header(); ?>
 $headshot = 'http://localhost:10038/wp-content/uploads/2024/04/melanie-headshot_cropped.jpg';
 ?>
 
-<main class="about--main main-content">
+<main id="main "class="about--main main-content">
 
 
 <?php

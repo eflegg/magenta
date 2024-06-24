@@ -61,7 +61,7 @@
                       star[c].style.left=(starx[c]=x)+"px";
                       star[c].style.top=(stary[c]=y)+"px";
                       star[c].style.clip="rect(0px, 5px, 5px, 0px)";
-                      star[c].childNodes[0].style.backgroundColor=star[c].childNodes[1].style.backgroundColor=(colour=="random")?newColour():colour;
+                      star[c].childNodes[0].style.backgroundColor=star[c].childNodes[1].style.backgroundColor=(colour=="random")?newMagentaColour():colour;
   
                       star[c].style.visibility="visible";
                       starv[c]=50;
@@ -136,9 +136,9 @@
           }
   
           function set_scroll() {
-              if (typeof(self.pageYOffset)=="number") {
-                  sdown=self.pageYOffset;
-                  sleft=self.pageXOffset;
+              if (typeof(self.scrollY)=="number") {
+                  sdown=self.scrollY;
+                  sleft=self.scrollY;
               }
               else if (document.body.scrollTop || document.body.scrollLeft) {
                   sdown=document.body.scrollTop;
@@ -181,17 +181,25 @@
               return (div);
           }
   
-          function newColour() {
-              var c=new Array();
-              c[0]=255;
-              c[1]=Math.floor(Math.random()*256);
-              c[2]=Math.floor(Math.random()*(256-c[1]/2));
-              c.sort(function(){return (0.5 - Math.random());});
-              return ("rgb("+c[0]+", "+c[1]+", "+c[2]+")");
-          }
+          // function newColour() {
+          //     var c=new Array();
+          //     c[0]=255;
+          //     c[1]=Math.floor(Math.random()*256);
+          //     c[2]=Math.floor(Math.random()*(256-c[1]/2));
+          //     c.sort(function(){return (0.5 - Math.random());});
+          //     return ("rgb("+c[0]+", "+c[1]+", "+c[2]+")");
+          // }
+          function newMagentaColour() {
+            const customColours=['#D97803', '#F6E3DC', '#BBCDCF', '#963E67',, '#BF5083', '#8C4D8D'];
+      
+            const randomColour = customColours[Math.floor(Math.random() * customColours.length)]; 
+            console.log(randomColour);
+            return randomColour;
+        }
   
           // ]]>
 
+          // myArray[Math.floor(Math.random() * myArray.length)];  
 
 
 
@@ -199,7 +207,12 @@
 document.addEventListener("DOMContentLoaded", function() {
 
  const linkTags = document.querySelectorAll('a');
- linkTags.forEach(el => {
+ const updatedLinkTags = Array.prototype.slice.call(linkTags);
+ console.log('updated ', updatedLinkTags);
+ const finalTags = updatedLinkTags.shift();
+ console.log('final tags ', updatedLinkTags);
+
+ updatedLinkTags.forEach(el => {
   el.classList.add('fade');
 })
 
@@ -346,6 +359,8 @@ function toggleAccordion(){
 }
 
 accordionItems.forEach(item => item.addEventListener('click', toggleAccordion));
+
+
 
 // fade-out
 

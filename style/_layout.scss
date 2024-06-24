@@ -183,6 +183,7 @@ main {
 			background: $lightPeach;
 			@include media(md){
 				background: transparent;
+				width: 50%;
 			}
 		}
 		.footer-ul {
@@ -193,7 +194,8 @@ main {
 			flex-wrap: wrap;
 			@include media(md){
 				flex-direction: column;
-				width: 100%;
+				width: 60%;
+				margin-left: auto;
 			}
 			justify-content: space-between;
 			li {

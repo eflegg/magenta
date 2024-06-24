@@ -47,7 +47,7 @@ $aboutLink = home_url('/about');
 $shopLink = home_url('/shop');
 ?>
 
-<main class="main-content">
+<main id="" class="main-content">
 
 
 
