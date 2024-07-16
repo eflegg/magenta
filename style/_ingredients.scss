@@ -1,4 +1,7 @@
 .ingredients-hero {
+    &.section-container {
+        max-width: none;
+    }
     height: 89vh;
     h1 {
         color: $purple;
@@ -35,7 +38,11 @@
     li {
        text-align: center;
     }
-
+@include media(md){
+    p {
+    font-size: 3rem;
+    }
+}
     @include media(sm){
         flex-direction: row;
         flex-wrap: wrap;
@@ -45,6 +52,7 @@
             width: 45%;
             text-align: left;
         }
+        
     }
 }
 

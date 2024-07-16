@@ -9,7 +9,7 @@ $bgImage = get_field('footer_image', 'options');
 			
 
 		<div class="footer--inner">
-			<div class="newsletter-signup section-container">
+			<div class="newsletter-signup section-container half">
 				<p class="headline-sans h4 light-text">Ready to make the connection?</p>
 				<article>
         			<?php echo do_shortcode('[ninja_form id=2]');?>
@@ -46,7 +46,7 @@ $bgImage = get_field('footer_image', 'options');
 		<div class="legal">
 			<div class="legal-inner">
 				<p class="">&copy; Magenta <?php the_time('Y'); ?> </p>
-				<p class="harc-attribution">Site by Flegg Creative</p>
+				<a href="https://fleggcreative.ca"><p class="harc-attribution">Site by Flegg Creative</p></a>
 			</div>
 		</div>
 		

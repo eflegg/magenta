@@ -7,6 +7,7 @@ Template Name: Category Blog Page
 
 get_header(); ?>
 
+<main class="main-content">
 <?php if ( have_posts() ) : ?>
     <h1 class="text-center"><?php single_cat_title(); ?></h1>
     <?php
@@ -36,5 +37,5 @@ get_header(); ?>
 ) ); ?>
     <?php endif; ?>
 
-
+    </main>
 <?php get_footer(); ?>

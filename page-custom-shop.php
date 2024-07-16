@@ -61,11 +61,11 @@ get_header(); ?>
         </div>
     </section>
 
-    <?php
+    <!-- <?php
     if( false === wp_script_is( 'single-filter', 'enqueued' ) ){
         echo '<h2>not working</h2>';
     }
-    ?>
+    ?> -->
 
 <section class="section-container">
 

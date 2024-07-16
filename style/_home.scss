@@ -96,6 +96,12 @@
     &.reverse {
         flex-direction: column;
         background-color: $purple;
+        .left {
+            img {
+                object-position: left;
+            }
+
+        }
         .btn {
             margin-bottom: 2rem;
         }
@@ -145,16 +151,27 @@
 .section-six {
    background: $purple;
    @include media(md){
-    height: 100vh;
+
     align-items: center;
     .right, figure {
         width: 50%;
-        height: 100vh;
+       
         display: flex;
         align-items: center;
     }
    }
+   figure {
+    height: auto;
+   }
+   .section-container {
+
+       margin: 0;
+    @include media(lg){
+        margin: auto;
+    }
+   }
 }
+
 
 //Testimonial Section 7
 

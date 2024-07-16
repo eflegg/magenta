@@ -193,7 +193,7 @@
             const customColours=['#D97803', '#F6E3DC', '#BBCDCF', '#963E67',, '#BF5083', '#8C4D8D'];
       
             const randomColour = customColours[Math.floor(Math.random() * customColours.length)]; 
-            console.log(randomColour);
+            // console.log(randomColour);
             return randomColour;
         }
   

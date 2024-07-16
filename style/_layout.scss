@@ -46,12 +46,13 @@ main {
 	max-width: 140rem;
 
 	&.half {
-		max-width: 56rem;
+		// max-width: 56rem;
 	}
 	position: relative;
 	padding: 3.25rem 2rem;
 	@include media(sm){
 		padding: 7rem 3rem;
+		// max-width: 56rem;
 	}
 	@include media(md){
 		padding: 8.25rem 6rem;
@@ -174,6 +175,9 @@ main {
 			
 		}
 		.newsletter-signup {
+			// &.section-container {
+			// 	margin: 0;
+			// }
 			@include media(md){
 				width: 50%;
 			}
@@ -220,7 +224,7 @@ main {
 			display: none;
 			visibility: hidden;
 			position: absolute;
-			bottom: -7rem;
+			bottom: 0rem;
 			left: 50%;
 			transform: translateX(-40%);
 			@include media(md){
