@@ -117,6 +117,11 @@
       
         }
     }
+    @include media(lg){
+        p {
+            font-size: 3rem;
+        }
+    }
     .left {
        img {
         object-position: right;
@@ -134,6 +139,7 @@
 //Section 5
 
 .section-five {
+  
     figure {
         height: auto;
     }
@@ -151,7 +157,7 @@
 .section-six {
    background: $purple;
    @include media(md){
-
+ 
     align-items: center;
     .right, figure {
         width: 50%;
@@ -160,9 +166,15 @@
         align-items: center;
     }
    }
+   @include media(lg){
+    p{
+        font-size: 3rem;
+    }
+   }
    figure {
     height: auto;
    }
+  
    .section-container {
 
        margin: 0;
